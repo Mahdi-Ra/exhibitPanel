@@ -26,17 +26,69 @@ Global Styles
 * {
   outline: none;
 }
+:root {
+  --direction: ltr;
+}
 
+body.rtl {
+  --direction: rtl;
+  font-family: 'Vazir';
+}
 body {
   background: #fff;
-  /*font-family: "Montserrat";*/
-  font-family: "Vazir";
+  font-family: "Montserrat";
   margin: 0;
   overflow-x: hidden;
   color: #526066;
   font-weight: 300;
   font-size: 14px;
-  direction: rtl;
+  direction: var(--direction);
+}
+
+@font-face {
+  font-family: 'Vazir';
+  src: url('../fonts/Vazir/eot/Vazir-Thin-FD-WOL.eot') format('eot'),
+  url('../fonts/Vazir/woff/Vazir-Thin-FD-WOL.woff') format('woff'),
+  url('../fonts/Vazir/woff2/Vazir-Thin-FD-WOL.woff2') format('woff2'),
+  url('../fonts/Vazir/ttf/Vazir-Thin-FD-WOL.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Vazir';
+  src: url('../fonts/Vazir/eot/Vazir-Light-FD-WOL.eot') format('eot'),
+  url('../fonts/Vazir/woff/Vazir-Light-FD-WOL.woff') format('woff'),
+  url('../fonts/Vazir/woff2/Vazir-Light-FD-WOL.woff2') format('woff2'),
+  url('../fonts/Vazir/ttf/Vazir-Light-FD-WOL.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Vazir';
+  src: url('../fonts/Vazir/eot/Vazir-FD-WOL.eot') format('eot'),
+  url('../fonts/Vazir/woff/Vazir-FD-WOL.woff') format('woff'),
+  url('../fonts/Vazir/woff2/Vazir-FD-WOL.woff2') format('woff2'),
+  url('../fonts/Vazir/ttf/Vazir-FD-WOL.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Vazir';
+  src: url('../fonts/Vazir/eot/Vazir-Medium-FD-WOL.eot') format('eot'),
+  url('../fonts/Vazir/woff/Vazir-Medium-FD-WOL.woff') format('woff'),
+  url('../fonts/Vazir/woff2/Vazir-Medium-FD-WOL.woff2') format('woff2'),
+  url('../fonts/Vazir/ttf/Vazir-Medium-FD-WOL.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Vazir';
+  src: url('../fonts/Vazir/eot/Vazir-Bold-FD-WOL.eot') format('eot'),
+  url('../fonts/Vazir/woff/Vazir-Bold-FD-WOL.woff') format('woff'),
+  url('../fonts/Vazir/woff2/Vazir-Bold-FD-WOL.woff2') format('woff2'),
+  url('../fonts/Vazir/ttf/Vazir-Bold-FD-WOL.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
 }
 
 html {
@@ -5020,14 +5072,20 @@ sidebar navigation
   border-width: 1px 0 0 1px;
   border-style: solid;
   border-color: #626878;
-  left: 10px;
-  -webkit-transform: rotate(-45deg) translate(0, -50%);
-  transform: rotate(-45deg) translate(0, -50%);
   -webkit-transform-origin: top;
   transform-origin: top;
   top: 45%;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+}
+.ltr .sidebar-nav .has-arrow::after {
+  
+}
+
+.rtl .sidebar-nav .has-arrow::after {
+  left: 10px !important;
+  -webkit-transform: rotate(-45deg) translate(0, -50%) !important;
+  transform: rotate(-45deg) translate(0, -50%) !important;
 }
 
 .sidebar-nav .active > .has-arrow::after,
@@ -5296,7 +5354,6 @@ When click on sidebar toggler and also for tablet
   min-width: 240px;
   font-size: 15px;
   padding-bottom: 10px;
-  text-align: right;
 }
 .topbar .dropdown-menu .dropdown-item.dropdown-item-iconed i {
   padding-right: 19px;
@@ -5335,7 +5392,6 @@ When click on sidebar toggler and also for tablet
 .topbar ul.dropdown-user li .dw-user-box .u-text {
   display: inline-block;
   padding-left: 30px;
-  text-align: right;
 }
 .topbar ul.dropdown-user li .dw-user-box .u-text h4 {
   margin: 0px;
@@ -5537,7 +5593,7 @@ Notify
   color: #526066;
 }
 .page-titles .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
-  content: "\e649";
+  content: "\e64a";
   font-family: themify;
   color: #a6b7bf;
   font-size: 11px;
@@ -5627,6 +5683,12 @@ Notify
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+/*.rtl-sidebar {
+  left: -240px;
+}
+.ltr-sidebar {
+  right: -240px;
+}*/
 .right-sidebar .rpanel-title {
   display: block;
   padding: 24px 20px 25px 20px;
@@ -5636,8 +5698,11 @@ Notify
   background: #20aee3;
   font-weight: 200;
 }
+.rpanel-title {
+  text-align: right;
+}
 .right-sidebar .rpanel-title span {
-  float: right;
+  float: left;
   cursor: pointer;
   font-size: 16px;
 }
@@ -5682,9 +5747,15 @@ Notify
 }
 
 .chatonline img {
+  width: 30px;
+}
+.rtl-chatonline-img {
+  margin-left: 10px;
+  float: right;
+}
+.ltr-chatonline-img {
   margin-right: 10px;
   float: left;
-  width: 30px;
 }
 .chatonline li a {
   padding: 13px 0;
@@ -6020,7 +6091,7 @@ Other comon js for all pages
 .table-responsive {
   display: block;
   width: 100%;
-  overflow-x: auto;
+  overflow-x: hidden;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
@@ -7565,7 +7636,7 @@ form p:last-child {
 [type=checkbox].filled-in + label:before,
 [type=checkbox].filled-in + label:after {
   content: "";
-  left: 0;
+  right: 0;
   position: absolute;
   /* .1s delay is for check animation */
   -webkit-transition: border 0.25s, background-color 0.25s, width 0.2s 0.1s, height 0.2s 0.1s, top 0.2s 0.1s, left 0.2s 0.1s;
@@ -7596,7 +7667,7 @@ form p:last-child {
 
 [type=checkbox].filled-in:checked + label:before {
   top: 0;
-  left: 1px;
+  right: 10px;
   width: 8px;
   height: 13px;
   border-top: 2px solid transparent;
@@ -7842,7 +7913,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
 }
 
 [type=checkbox] + label {
-  padding-left: 26px;
+  padding-right: 26px;
   height: 25px;
   line-height: 21px;
   font-weight: normal;
@@ -10157,11 +10228,17 @@ Login register and recover password Page
   border-left: 1px solid #eae7e7;
   margin-left: 30px;
 }
-.profiletimeline .sl-left {
+.profiletimeline .sl-left-dir {
   float: left;
   margin-left: -60px;
   z-index: 1;
   margin-right: 15px;
+}
+.profiletimeline .sl-right-dir {
+  float: right;
+  margin-right: -60px;
+  z-index: 1;
+  margin-left: 15px;
 }
 .profiletimeline .sl-left img {
   max-width: 40px;
@@ -10771,11 +10848,11 @@ widget-chart-page product review
 /*-- ============================================================== 
  Small Desktop & above all (1024px) 
  ============================================================== */
-@media (min-width: 1024px) {
+/*@media (min-width: 1024px) {
   .page-wrapper {
     margin-right: 210px;
   }
-}
+}*/
 @media (max-width: 1023px) {
   .page-wrapper {
     margin-right: 70px;
@@ -11546,7 +11623,7 @@ a.underlined:hover {
 #sidebarnav {
   padding-top: 8px;
   padding-bottom: 40px;
-  text-align: right;
+  /*text-align: right;*/
 }
 
 .mini-sidebar.fix-header .topbar {
@@ -11930,6 +12007,7 @@ a.link:hover, a.link:focus {
 .right-sidebar .filter-block {
   padding: 4px 0px 6px 0px;
   margin-bottom: 8px;
+  text-align: right;
 }
 .right-sidebar .filter-block .title {
   font-size: 13px;
@@ -11987,9 +12065,9 @@ a.link:hover, a.link:focus {
   min-height: 31px !important;
   padding: 5px 10px;
   border: 1px solid #ced4da;
-  border-right: none;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-left: none;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
   height: calc(1.5em + 0.5rem + 2px);
 }
 .input-group-sm.input-group-right .input-group-addon {
@@ -12339,7 +12417,6 @@ textarea.error {
 }
 .modal .modal-dialog .modal-header button.close {
   position: absolute;
-  left: 20px;
   top: 20px;
   text-shadow: none;
   background-color: transparent;
@@ -12348,6 +12425,13 @@ textarea.error {
   border-radius: 50%;
   border: none;
 }
+.modal .modal-dialog .modal-header button.rtl-close {
+  left: 20px;
+}
+.modal .modal-dialog .modal-header button.ltr-close {
+  right: 20px;
+}
+
 .modal .modal-dialog .modal-header button.close:hover, .modal .modal-dialog .modal-header button.close:active, .modal .modal-dialog .modal-header button.close:visited, .modal .modal-dialog .modal-header button.close:focus {
   border: none;
   outline: none;
@@ -14336,7 +14420,7 @@ textarea {
   margin-right: 20px;
 }
 .kanban .kanban-wrapper .boards .board:last-child {
-  margin-right: 0px;
+  /*margin-right: 0px;*/
 }
 .kanban .kanban-wrapper .boards .board .ps__rail-y {
   right: 2px !important;
@@ -15035,13 +15119,13 @@ div.boards::-webkit-scrollbar {
 * infomation alerts
 * -------------------------------------------------------*/
 .alert-info {
-  border-left: solid 4px #bee5eb;
+  border-right: solid 4px #bee5eb;
   background-color: #fff;
   border-radius: 4px;
 }
 
 .alert-danger {
-  border-left: solid 4px #f5c6cb;
+  border-right: solid 4px #f5c6cb;
   background-color: #fff;
   border-radius: 4px;
 }
@@ -15053,7 +15137,7 @@ div.boards::-webkit-scrollbar {
 }
 
 .alert-warning {
-  border-left: solid 4px #ffeeba;
+  border-right: solid 4px #ffeeba;
   background-color: #fff;
   border-radius: 4px;
 }
@@ -15177,7 +15261,7 @@ table .projects_col_progress {
   -webkit-transform: translate3d(0px, 39px, 0px);
           transform: translate3d(0px, 39px, 0px);
   top: 0px;
-  left: 0px;
+  right: 0px;
   will-change: transform;
 }
 
@@ -15252,7 +15336,7 @@ table .projects_col_progress {
 }
 
 .fx-kaban-sorting-dropdown-container {
-  padding-left: 15px;
+  padding-right: 15px;
   border-bottom: solid 1px #eeeff0;
   font-size: 14px;
   font-weight: 500;
@@ -15821,7 +15905,6 @@ chat application Page
 .chat-main-box .chat-left-aside {
   position: relative;
   width: 250px;
-  float: left;
   z-index: 9;
   top: 0px;
   border-right: 1px solid #eae7e7;
@@ -17691,8 +17774,6 @@ chat application Page
 * --------------------------------------------------------*/
 .chat-main-box {
   position: absolute;
-  right: 0;
-  left: -10px;
   bottom: 0;
   top: 74px;
   background-color: white;
@@ -17731,21 +17812,36 @@ chat application Page
 .chat-main-box .chat-right-aside {
   position: absolute;
   top: 0px;
+  bottom: 0;
+}
+.chat-main-box .rtl-chat-right {
+  right: 249px;
+  left: 0;
+}
+.chat-main-box .ltr-chat-right {
   right: 0;
   left: 249px;
-  bottom: 0;
 }
 .chat-main-box .chat-rbox {
   position: absolute !important;
   top: 5px;
-  right: 0;
-  left: 0;
   bottom: 120px;
   overflow-y: scroll;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.chat-main-box .rtl-chat-rbox{
+  right: 10px;
+  left: 0;
+  direction: ltr;
+}
+.chat-main-box .ltr-chat-rbox{
+  right: 0;
+  left: 10px;
   direction: rtl;
 }
+
 .chat-main-box .chat-rbox .chat-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17848,20 +17944,33 @@ chat application Page
 }
 .chat-main-box .card-post .messaging_submit_button {
   position: absolute;
-  right: 20px;
   top: 15px;
 }
 .chat-main-box .card-post .messaging_file_upload_button {
   position: absolute;
-  right: 30px;
   top: 80px;
   height: 30px;
   width: 30px;
   padding-top: 5px;
   text-align: center;
-  padding-left: 7px;
   font-size: 14px;
 }
+
+.chat-main-box .card-post .rtl_messaging_submit_button {
+  left: 20px;
+}
+.chat-main-box .card-post .ltr_messaging_submit_button {
+  right: 20px;
+}
+.chat-main-box .card-post .rtl_messaging_file_upload_button {
+  left: 30px;
+  padding-right: 7px;
+}
+.chat-main-box .card-post .ltr_messaging_file_upload_button {
+  right: 30px;
+  padding-left: 7px;
+}
+
 .chat-main-box .messages_file_upload_wrapper {
   background-color: #f9fbfb;
 }

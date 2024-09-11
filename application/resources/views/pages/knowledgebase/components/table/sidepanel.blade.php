@@ -2,7 +2,7 @@
     <div class="card-body">
 
         <!--categories-->
-        <div class="x-section">
+        <div class="x-section text-right">
             <h4>{{ cleanLang(__('lang.categories')) }}</h4>
             <ul>
                 @foreach($categories as $category)

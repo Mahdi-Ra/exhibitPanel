@@ -1,7 +1,7 @@
 @extends('pages.settings.ajaxwrapper')
 @section('settings-page')
 <!--settings-->
-<form class="form" id="settingsFormCurrency">
+<form class="form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}" id="settingsFormCurrency">
 
     <!--currencies-->
     <div class="form-group row">
@@ -238,7 +238,7 @@
     <!--currency symbol position-->
     <div class="form-group row">
         <label for="example-month-input"
-            class="col-12 col-form-label text-left">{{ cleanLang(__('lang.currency_symbol_position')) }}</label>
+            class="col-12 col-form-label">{{ cleanLang(__('lang.currency_symbol_position')) }}</label>
         <div class="col-12">
             <select class="select2-basic form-control form-control-sm" id="settings_system_currency_position"
                 name="settings_system_currency_position">
@@ -255,14 +255,14 @@
     @if(config('system.settings_type') == 'standalone')
     <!--[standalone] - settings documentation help-->
     <div>
-        <a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation"><i
+        <a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation {{ app()->getLocale() == 'persian_br' ? 'float-right' : 'float-left' }}"><i
                 class="ti-info-alt"></i>
             {{ cleanLang(__('lang.help_documentation')) }}</a>
     </div>
     @endif
     
     <div class="text-right">
-        <button type="submit" id="commonModalSubmitButton" class="btn btn-rounded-x btn-danger waves-effect text-left"
+        <button type="submit" id="commonModalSubmitButton" class="btn btn-rounded-x btn-danger waves-effect text-left {{ app()->getLocale() == 'persian_br' ? 'float-left' : 'float-right' }}"
             data-url="/settings/currency" data-loading-target="" data-ajax-type="PUT" data-type="form"
             data-on-start-submit-button="disable">{{ cleanLang(__('lang.save_changes')) }}</button>
     </div>

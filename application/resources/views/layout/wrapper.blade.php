@@ -5,7 +5,7 @@
 @include('layout.header')
 
 <body id="main-body"
-    class="loggedin fix-header card-no-border fix-sidebar {{ config('settings.css_kanban') }} {{ runtimePreferenceLeftmenuPosition(auth()->user()->left_menu_position) }} {{ $page['page'] ?? '' }}">
+    class="loggedin fix-header {{ app()->getLocale() == 'persian_br' ? 'rtl' : '' }} card-no-border fix-sidebar {{ config('settings.css_kanban') }} {{ runtimePreferenceLeftmenuPosition(auth()->user()->left_menu_position) }} {{ $page['page'] ?? '' }}" >
 
     <!--main wrapper-->
     <div id="main-wrapper">
@@ -23,8 +23,17 @@
 
 
         <!--page wrapper-->
-        <div class="page-wrapper">
-
+        <div class="page-wrapper {{ app()->getLocale() == 'persian_br' ? 'right-direction' : 'left-direction' }}">
+            <style>
+               @media (min-width: 1024px) {
+                .left-direction {
+                    margin-left: 210px;
+                    }
+                    .right-direction {
+                    margin-right: 210px;
+                    }
+                }
+            </style>
             <!--overlay-->
             <div class="page-wrapper-overlay js-close-side-panels hidden" data-target=""></div>
             <!--overlay-->

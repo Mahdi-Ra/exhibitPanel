@@ -4,7 +4,7 @@
 <form class="form" id="settingsFormFolders">
     <!--item-->
     <div class="form-group row">
-        <label class="col-sm-12 text-left control-label col-form-label">@lang('lang.file_folders')</label>
+        <label class="col-sm-12 text-left control-label col-form-label {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">@lang('lang.file_folders')</label>
         <div class="col-sm-12">
             <select class="select2-basic form-control form-control-sm select2-preselected"
                 id="settings2_file_folders_status" name="settings2_file_folders_status"
@@ -18,15 +18,15 @@
     <div class="line"></div>
 
 
-    <div class="card-contrast-panel {{ runtimeVisibility('settings-file-folders-manage', $settings->settings2_file_folders_status) }}"
+    <div class="card-contrast-panel  {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} {{ runtimeVisibility('settings-file-folders-manage', $settings->settings2_file_folders_status) }}"
         id="file_folders_managers">
 
         <h6 class="text-underlined m-b-16">@lang('lang.users_that_can_manage_folders')</h6>
 
         <!--settings2_file_folders_manage_assigned-->
         <div class="form-group form-group-checkbox row">
-            <label class="col-sm-12 col-lg-4 col-form-label text-left">@lang('lang.assigned_users')</label>
-            <div class="col-sm-12 col-lg-8 text-left p-t-5">
+            <label class="col-sm-12 col-lg-4 col-form-label {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">@lang('lang.assigned_users')</label>
+            <div class="col-sm-12 col-lg-8 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} p-t-5">
                 <input type="checkbox" id="settings2_file_folders_manage_assigned"
                     name="settings2_file_folders_manage_assigned" class="filled-in chk-col-light-blue"
                     {{ runtimePrechecked($settings->settings2_file_folders_manage_assigned ?? '') }}>
@@ -37,8 +37,8 @@
 
         <!--settings2_file_folders_manage_project_manager-->
         <div class="form-group form-group-checkbox row">
-            <label class="col-sm-12 col-lg-4 col-form-label text-left">@lang('lang.project_manager')</label>
-            <div class="col-sm-12 col-lg-8 text-left p-t-5">
+            <label class="col-sm-12 col-lg-4 col-form-label {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">@lang('lang.project_manager')</label>
+            <div class="col-sm-12 col-lg-8 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} p-t-5">
                 <input type="checkbox" id="settings2_file_folders_manage_project_manager"
                     name="settings2_file_folders_manage_project_manager" class="filled-in chk-col-light-blue"
                     {{ runtimePrechecked($settings->settings2_file_folders_manage_project_manager ?? '') }}>
@@ -48,8 +48,8 @@
 
         <!--settings2_file_folders_manage_client-->
         <div class="form-group form-group-checkbox row">
-            <label class="col-sm-12 col-lg-4 col-form-label text-left">@lang('lang.client')</label>
-            <div class="col-sm-12 col-lg-8 text-left p-t-5">
+            <label class="col-sm-12 col-lg-4 col-form-label {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">@lang('lang.client')</label>
+            <div class="col-sm-12 col-lg-8 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} p-t-5">
                 <input type="checkbox" id="settings2_file_folders_manage_client"
                     name="settings2_file_folders_manage_client" class="filled-in chk-col-light-blue"
                     {{ runtimePrechecked($settings->settings2_file_folders_manage_client ?? '') }}>
@@ -60,7 +60,7 @@
 
     <div class="text-right">
         <button type="submit" id="commonModalSubmitButton"
-            class="btn btn-rounded-x btn-danger waves-effect text-left ajax-request" data-url="/settings/files/folders"
+            class="btn btn-rounded-x btn-danger waves-effect text-left ajax-request {{ app()->getLocale() == 'persian_br' ? 'flaot-left' : 'float-right' }}" data-url="/settings/files/folders"
             data-loading-target="" data-ajax-type="PUT" data-type="form"
             data-on-start-submit-button="disable">{{ cleanLang(__('lang.save_changes')) }}</button>
     </div>
@@ -69,7 +69,7 @@
 
 @if(config('system.settings_type') == 'standalone')
 <!--[standalone] - settings documentation help-->
-<a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation"><i
+<a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation {{ app()->getLocale() == 'persian_br' ? 'float-left' : 'float-right' }}"><i
         class="ti-info-alt"></i>
     {{ cleanLang(__('lang.help_documentation')) }}
 </a>

@@ -1,5 +1,5 @@
 <!--CRUMBS CONTAINER (RIGHT)-->
-<div class="col-md-12  col-lg-7 p-b-9 align-self-center text-right <?php echo e($page['list_page_actions_size'] ?? ''); ?> <?php echo e($page['list_page_container_class'] ?? ''); ?>"
+<div class="col-md-12  col-lg-7 p-b-9 align-self-center <?php echo e(app()->getLocale() == 'persian_br' ? 'text-left' : 'text-right'); ?> <?php echo e($page['list_page_actions_size'] ?? ''); ?> <?php echo e($page['list_page_container_class'] ?? ''); ?>"
     id="list-page-actions-container">
     <div id="list-page-actions">
         <!--SEARCH BOX-->
@@ -43,7 +43,7 @@
             <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                 class="list-actions-button btn waves-effect waves-dark dropdown-toggle">
                 <i class="mdi mdi-sort"></i></button>
-            <div class="dropdown-menu dropdown-menu-right fx-kaban-sorting-dropdown">
+            <div class="dropdown-menu dropdown-menu-right fx-kaban-sorting-dropdown <?php echo e(app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left'); ?>">
                 <div class="fx-kaban-sorting-dropdown-container"><?php echo e(cleanLang(__('lang.sort_by'))); ?></div>
                 <a class="dropdown-item js-ajax-ux-request" id="sort_kanban_lead_created" href="javascript:void(0)"
                     data-url="<?php echo e(urlResource('/leads?action=sort&orderby=lead_created&sortorder=asc')); ?>"><?php echo e(cleanLang(__('lang.date_created'))); ?></a>

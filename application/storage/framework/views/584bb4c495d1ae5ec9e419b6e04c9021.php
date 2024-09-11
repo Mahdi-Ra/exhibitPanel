@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="ticket-panel">
-                    <div class="x-top-header">
+                    <div class="x-top-header { app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
                         <?php echo e(cleanLang(__('lang.categories'))); ?>
 
                     </div>
@@ -13,7 +13,7 @@
 
                         <!--department-->
                         <?php $__currentLoopData = $category_list; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <div class="x-list ajax-request cursor-pointer canned_category <?php echo e(runtimeCannedCategory($category['category_id'])); ?>"
+                        <div class="x-list ajax-request { app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} cursor-pointer canned_category <?php echo e(runtimeCannedCategory($category['category_id'])); ?>"
                             data-url="<?php echo e(url('canned?filter_categoryid='.$category['category_id'])); ?>"
                             id="canned_category_<?php echo e($category['category_id']); ?>">
                             <div class="x-name"><?php echo e($category['category_name']); ?></div>
@@ -26,7 +26,7 @@
 
                         <!--edit button-->
                         <?php if(config('visibility.action_buttons_manage')): ?>
-                        <div class="x-list b-none">
+                        <div class="x-list b-none { app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
                             <!--add item modal-->
                             <a href="<?php echo e(url('app/categories?filter_category_type=canned&source=ext')); ?>" type="button"
                                 class="btn btn-info btn-sm edit-add-modal-button"><?php echo app('translator')->get('lang.manage_categories'); ?>

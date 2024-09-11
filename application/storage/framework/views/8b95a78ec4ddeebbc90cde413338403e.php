@@ -1,8 +1,8 @@
 <div class="board">
     <div class="board-body <?php echo e(runtimeKanbanBoardColors($board['color'])); ?>">
         <div class="board-heading clearfix">
-            <div class="pull-left"><?php echo e(runtimeLang($board['name'])); ?></div>
-            <div class="pull-right x-action-icons">
+            <div class="pull-right"><?php echo e(runtimeLang($board['name'])); ?></div>
+            <div class="pull-left x-action-icons">
                 <!--action add-->
                 <span class="edit-add-modal-button js-ajax-ux-request reset-target-modal-form cursor-pointer"
                     data-toggle="modal" data-target="#commonModal"

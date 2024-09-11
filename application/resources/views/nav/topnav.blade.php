@@ -7,7 +7,7 @@
 
             @if(request('dashboard_section') == 'settings')
             <!--exist-->
-            <div class="sidenav-menu-item exit-panel m-b-17">
+            <div class="sidenav-menu-item exit-panel m-b-17 float-right">
                 <a class="waves-effect waves-dark text-info" href="/home" id="settings-exit-button"
                     aria-expanded="false" target="_self">
                     <i class="sl-icon-logout text-info"></i>
@@ -119,7 +119,7 @@
 
 
             <!--RIGHT SIDE-->
-            <ul class="navbar-nav navbar-top-right my-lg-0 mr-auto" id="right-topnav-navbar">
+            <ul class="navbar-nav navbar-top-right my-lg-0 {{ app()->getLocale() == 'persian_br' ? 'mr-auto' : 'ml-auto' }}" id="right-topnav-navbar">
 
                 <!-- Reminders Notification-->
                 <li class="nav-item dropdown d-none d-sm-block" id="topnav-reminders-dropdown"
@@ -234,12 +234,12 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="mdi mdi-plus-circle-multiple-outline text-danger font-28"></i>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-left">
+                    <div class="dropdown-menu {{ app()->getLocale() == 'persian_br' ? 'drop-down-menu-left' : 'drop-down-menu-right' }}">
 
                         <!-- client -->
                         @if(auth()->user()->role->role_projects >= 2)
                         <a href="javascript:void(0)"
-                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form"
+                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"
                             data-toggle="modal" data-target="#commonModal" data-url="{{ url('clients/create') }}"
                             data-loading-target="commonModalBody"
                             data-modal-title="{{ cleanLang(__('lang.add_client')) }}"
@@ -252,7 +252,7 @@
                         <!-- project -->
                         @if(config('visibility.modules.projects') && auth()->user()->role->role_projects >= 2)
                         <a href="javascript:void(0)"
-                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form"
+                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"
                             data-toggle="modal" data-target="#commonModal" data-url="{{ url('projects/create') }}"
                             data-loading-target="commonModalBody"
                             data-modal-title="{{ cleanLang(__('lang.add_project')) }}"
@@ -265,7 +265,7 @@
                         <!-- task -->
                         @if(config('visibility.modules.tasks') && auth()->user()->role->role_tasks >= 2)
                         <a href="javascript:void(0)"
-                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form"
+                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"
                             data-toggle="modal" data-target="#commonModal"
                             data-url="{{ url('/tasks/create?ref=quickadd') }}" data-loading-target="commonModalBody"
                             data-modal-title="{{ cleanLang(__('lang.add_task')) }}"
@@ -278,7 +278,7 @@
                         <!-- lead -->
                         @if(config('visibility.modules.leads') && auth()->user()->role->role_leads >= 2)
                         <a href="javascript:void(0)"
-                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form"
+                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"
                             data-toggle="modal" data-target="#commonModal"
                             data-url="{{ url('/leads/create?ref=quickadd') }}" data-loading-target="commonModalBody"
                             data-modal-title="{{ cleanLang(__('lang.add_lead')) }}"
@@ -291,7 +291,7 @@
                         <!-- invoice -->
                         @if(config('visibility.modules.invoices') && auth()->user()->role->role_invoices >= 2)
                         <a href="javascript:void(0)"
-                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form"
+                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"
                             data-toggle="modal" data-target="#commonModal"
                             data-url="{{ url('/invoices/create?ref=quickadd') }}" data-loading-target="commonModalBody"
                             data-modal-title="{{ cleanLang(__('lang.add_invoice')) }}"
@@ -305,7 +305,7 @@
                         <!-- estimate -->
                         @if(config('visibility.modules.estimates') && auth()->user()->role->role_estimates >= 2)
                         <a href="javascript:void(0)"
-                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form"
+                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"
                             data-toggle="modal" data-target="#commonModal"
                             data-url="{{ url('/estimates/create?ref=quickadd') }}" data-loading-target="commonModalBody"
                             data-modal-title="{{ cleanLang(__('lang.add_estimate')) }}"
@@ -319,7 +319,7 @@
                         <!-- proposal -->
                         @if(config('visibility.modules.proposals') && auth()->user()->role->role_proposals >= 2)
                         <a href="javascript:void(0)"
-                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form"
+                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"
                             data-toggle="modal" data-target="#commonModal"
                             data-url="{{ url('/proposals/create?ref=quickadd') }}" data-loading-target="commonModalBody"
                             data-modal-title="{{ cleanLang(__('lang.add_proposal')) }}"
@@ -333,7 +333,7 @@
                         <!-- contract -->
                         @if(config('visibility.modules.contracts') && auth()->user()->role->role_contracts >= 2)
                         <a href="javascript:void(0)"
-                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form"
+                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"
                             data-toggle="modal" data-target="#commonModal"
                             data-url="{{ url('/contracts/create?ref=quickadd') }}" data-loading-target="commonModalBody"
                             data-modal-title="{{ cleanLang(__('lang.add_contract')) }}"
@@ -346,7 +346,7 @@
                         <!-- payment -->
                         @if(config('visibility.modules.payments') && auth()->user()->role->role_invoices >= 2)
                         <a href="javascript:void(0)"
-                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form"
+                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"
                             data-toggle="modal" data-target="#commonModal"
                             data-url="{{ url('/payments/create?ref=quickadd') }}" data-loading-target="commonModalBody"
                             data-modal-title="{{ cleanLang(__('lang.add_payment')) }}"
@@ -359,7 +359,7 @@
                         <!-- subscription -->
                         @if(config('visibility.modules.subscriptions') && auth()->user()->role->role_subscriptions >= 2)
                         <a href="javascript:void(0)"
-                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form"
+                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"
                             data-toggle="modal" data-target="#commonModal"
                             data-url="{{ url('/subscriptions/create?ref=quickadd') }}"
                             data-loading-target="commonModalBody"
@@ -373,7 +373,7 @@
                         <!-- expense -->
                         @if(config('visibility.modules.expenses') && auth()->user()->role->role_expenses >= 2)
                         <a href="javascript:void(0)"
-                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form"
+                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"
                             data-toggle="modal" data-target="#commonModal"
                             data-url="{{ url('/expenses/create?ref=quickadd') }}" data-loading-target="commonModalBody"
                             data-modal-title="{{ cleanLang(__('lang.add_expense')) }}"
@@ -387,7 +387,7 @@
                         <!-- knowledgebase article -->
                         @if(config('visibility.modules.knowledgebase') && auth()->user()->role->role_knowledgebase >= 2)
                         <a href="javascript:void(0)"
-                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form"
+                            class="dropdown-item dropdown-item-iconed edit-add-modal-button js-ajax-ux-request reset-target-modal-form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"
                             data-toggle="modal" data-target="#commonModal" data-url="{{ url('kb/create') }}"
                             data-loading-target="commonModalBody"
                             data-modal-title="{{ cleanLang(__('lang.add_article')) }}" data-action-url="{{ url('kb') }}"
@@ -399,7 +399,7 @@
 
                         <!-- knowledgebase article -->
                         @if(config('visibility.modules.tickets') && auth()->user()->role->role_tickets >= 2)
-                        <a class="dropdown-item dropdown-item-iconed" href="{{ url('/tickets/create') }}">
+                        <a class="dropdown-item dropdown-item-iconed {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}" href="{{ url('/tickets/create') }}">
                             <i class="ti-comments"></i> {{ cleanLang(__('lang.ticket')) }}</a>
                         @endif
 
@@ -416,7 +416,15 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="sl-icon-globe"></i>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-left animated bounceInDown language">
+                    <div class="dropdown-menu {{ app()->getLocale() == 'persian_br' ? 'drop-down-menu-left' : 'drop-down-menu-right' }} animated bounceInDown language">
+                    <style>
+                        .drop-down-menu-left {
+                            left: 0; right: auto;
+                        }
+                        .drop-down-menu-right {
+                            right: 0; left: auto;
+                        }
+                    </style>
                         <div class="row">
                             @foreach(request('system_languages') as $key => $language)
                             <div class="col-6">
@@ -445,11 +453,11 @@
                         <span class="hidden-md-down" id="topnav_username">{{ auth()->user()->first_name }}
                         </span>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-left animated flipInY">
+                    <div class="dropdown-menu {{ app()->getLocale() == 'persian_br' ? 'drop-down-menu-left' : 'drop-down-menu-right' }} animated flipInY">
                         <ul class="dropdown-user">
                             <li>
                                 <div class="dw-user-box">
-                                <div class="u-text">
+                                <div class="u-text {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
                                         <h4 id="topnav_dropdown_full_name">{{ auth()->user()->first_name }}
                                             {{ auth()->user()->last_name }}</h4>
                                         <p class="text-muted" id="topnav_dropdown_email">{{ auth()->user()->email }}</p>

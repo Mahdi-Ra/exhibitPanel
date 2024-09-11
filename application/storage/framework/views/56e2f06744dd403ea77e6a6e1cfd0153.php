@@ -5,7 +5,7 @@
     <div class="card">
         <div class="card-body">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 <?php echo e(app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left'); ?>">
                     <h3 id="stats-widget-value-1"><?php echo e($stat['value'] ?? ''); ?></h3>
                     <h6 class="card-subtitle" id="stats-widget-title-1"><?php echo e($stat['title'] ?? ''); ?></h6>
                 </div>

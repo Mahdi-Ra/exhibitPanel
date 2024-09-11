@@ -19,7 +19,7 @@
 
     <!-- page content -->
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
             <!--contacts table-->
             @include('pages.contacts.components.table.wrapper')
             <!--contacts table-->

@@ -1,12 +1,12 @@
 @extends('pages.settings.ajaxwrapper')
 @section('settings-page')
 <!--settings-->
-<form class="form" id="settings-proposals-automation">
+<form class="form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}" id="settings-proposals-automation">
 
 
     <!--settings2_proposals_automation_default_status-->
     <div class="form-group row p-b-10">
-        <label class="col-sm-12 text-left control-label col-form-label">@lang('lang.proposal_automation_default') <span
+        <label class="col-sm-12 control-label col-form-label">@lang('lang.proposal_automation_default') <span
                 class="align-middle text-info font-16" data-toggle="tooltip"
                 title="@lang('lang.proposal_automation_default_info')" data-placement="top"><i
                     class="ti-info-alt"></i></span></label>

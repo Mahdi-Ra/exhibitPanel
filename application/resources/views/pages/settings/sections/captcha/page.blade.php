@@ -1,7 +1,7 @@
 @extends('pages.settings.ajaxwrapper')
 @section('settings-page')
 <!--settings-->
-<form class="form">
+<form class="form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
     
     <!--form text tem-->
     <div class="form-group row">

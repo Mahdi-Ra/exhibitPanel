@@ -2,7 +2,7 @@
 <tr class="customfields-table-settings hidden toggle-table-settings-row  toggle-table-settings-row-{{ $field->customfields_id }}"
     id="customfields_settings_row_{{ $field->customfields_id }}">
     <td class="b-0">
-        <div class="row">
+        <div class="row {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
             <!--dropdown options-->
             @include('pages.settings.sections.customfields.settings.dropdown')
 

@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="ticket-panel">
-                    <div class="x-top-header">
+                    <div class="x-top-header { app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
                         {{ cleanLang(__('lang.categories')) }}
                     </div>
 
@@ -12,7 +12,7 @@
 
                         <!--department-->
                         @foreach($category_list as $category)
-                        <div class="x-list ajax-request cursor-pointer canned_category {{ runtimeCannedCategory($category['category_id']) }}"
+                        <div class="x-list ajax-request { app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} cursor-pointer canned_category {{ runtimeCannedCategory($category['category_id']) }}"
                             data-url="{{ url('canned?filter_categoryid='.$category['category_id']) }}"
                             id="canned_category_{{ $category['category_id'] }}">
                             <div class="x-name">{{ $category['category_name'] }}</div>
@@ -25,7 +25,7 @@
 
                         <!--edit button-->
                         @if(config('visibility.action_buttons_manage'))
-                        <div class="x-list b-none">
+                        <div class="x-list b-none { app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
                             <!--add item modal-->
                             <a href="{{ url('app/categories?filter_category_type=canned&source=ext') }}" type="button"
                                 class="btn btn-info btn-sm edit-add-modal-button">@lang('lang.manage_categories')

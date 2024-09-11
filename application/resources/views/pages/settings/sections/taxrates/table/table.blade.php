@@ -1,6 +1,6 @@
 <div class="table-responsive" id="taxrates-table-wrapper">
     @if (@count($taxrates ?? []) > 0)
-    <table id="demo-taxrate-addrow" class="table m-t-0 m-b-0 table-hover no-wrap contact-list" data-page-size="10">
+    <table id="demo-taxrate-addrow" class="table m-t-0 m-b-0 table-hover no-wrap contact-list {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}" data-page-size="10">
         <thead>
             <tr>
                 <th class="taxrates_col_name">{{ cleanLang(__('lang.name')) }}</th>

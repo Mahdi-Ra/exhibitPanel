@@ -1,5 +1,5 @@
 <!--CRUMBS CONTAINER (RIGHT)-->
-<div class="col-12 align-self-center text-right"
+<div class="col-12 align-self-center text-left"
     id="list-page-actions-container">
     <div id="list-page-actions">
         <!--ADD NEW ITEM-->

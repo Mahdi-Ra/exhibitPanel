@@ -1,7 +1,7 @@
 <!--table-->
 @if (@count($invoices ?? []) > 0)
 <div class="table-responsive report-results-table-container" id="report-results-container">
-    <table class="table table-hover no-wrap" id="report-results-table">
+    <table class="table table-hover no-wrap text-right" id="report-results-table">
         <thead>
             <tr>
                 <!--client-->

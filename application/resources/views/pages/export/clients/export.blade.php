@@ -15,10 +15,10 @@
 
                 <!--standard fields-->
                 <div class="">
-                    <h5>@lang('lang.standard_fields')</h5>
+                    <h5 style="text-align: right;">@lang('lang.standard_fields')</h5>
                 </div>
                 <div class="line"></div>
-                <div class="row">
+                <div class="row text-right">
 
                     <!--client_company_name-->
                     <div class="col-sm-12 col-lg-6">
@@ -27,7 +27,7 @@
                                 <input type="checkbox" id="standard_field[client_company_name]"
                                     name="standard_field[client_company_name]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30"
+                                <label class="p-r-30"
                                     for="standard_field[client_company_name]">@lang('lang.client_name')</label>
                             </div>
                         </div>
@@ -40,7 +40,7 @@
                                 <input type="checkbox" id="standard_field[client_created]"
                                     name="standard_field[client_created]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30"
+                                <label class="p-r-30"
                                     for="standard_field[client_created]">@lang('lang.date_created')</label>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[category]" name="standard_field[category]"
                                     class="filled-in chk-col-light-blue" checked="checked">
-                                <label class="p-l-30" for="standard_field[category]">@lang('lang.category')</label>
+                                <label class="p-r-30" for="standard_field[category]">@lang('lang.category')</label>
                             </div>
                         </div>
                     </div>
@@ -65,7 +65,7 @@
                                 <input type="checkbox" id="standard_field[contact_name]"
                                     name="standard_field[contact_name]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30"
+                                <label class="p-r-30"
                                     for="standard_field[contact_name]">@lang('lang.contact_name')</label>
                             </div>
                         </div>
@@ -78,7 +78,7 @@
                                 <input type="checkbox" id="standard_field[contact_email]"
                                     name="standard_field[contact_email]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30"
+                                <label class="p-r-30"
                                     for="standard_field[contact_email]">@lang('lang.contact_email')</label>
                             </div>
                         </div>
@@ -91,7 +91,7 @@
                                 <input type="checkbox" id="standard_field[client_phone]"
                                     name="standard_field[client_phone]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30" for="standard_field[client_phone]">@lang('lang.telephone')</label>
+                                <label class="p-r-30" for="standard_field[client_phone]">@lang('lang.telephone')</label>
                             </div>
                         </div>
                     </div>
@@ -103,7 +103,7 @@
                                 <input type="checkbox" id="standard_field[client_website]"
                                     name="standard_field[client_website]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30" for="standard_field[client_website]">@lang('lang.website')</label>
+                                <label class="p-r-30" for="standard_field[client_website]">@lang('lang.website')</label>
                             </div>
                         </div>
                     </div>
@@ -114,7 +114,7 @@
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[client_vat]" name="standard_field[client_vat]"
                                     class="filled-in chk-col-light-blue" checked="checked">
-                                <label class="p-l-30"
+                                <label class="p-r-30"
                                     for="standard_field[client_vat]">@lang('lang.vat_tax_number')</label>
                             </div>
                         </div>
@@ -127,7 +127,7 @@
                                 <input type="checkbox" id="standard_field[client_billing_street]"
                                     name="standard_field[client_billing_street]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30"
+                                <label class="p-r-30"
                                     for="standard_field[client_billing_street]">@lang('lang.street')</label>
                             </div>
                         </div>
@@ -140,7 +140,7 @@
                                 <input type="checkbox" id="standard_field[client_billing_city]"
                                     name="standard_field[client_billing_city]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30"
+                                <label class="p-r-30"
                                     for="standard_field[client_billing_city]">@lang('lang.city')</label>
                             </div>
                         </div>
@@ -153,7 +153,7 @@
                                 <input type="checkbox" id="standard_field[client_billing_state]"
                                     name="standard_field[client_billing_state]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30"
+                                <label class="p-r-30"
                                     for="standard_field[client_billing_state]">@lang('lang.state')</label>
                             </div>
                         </div>
@@ -166,7 +166,7 @@
                                 <input type="checkbox" id="standard_field[client_billing_zip]"
                                     name="standard_field[client_billing_zip]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30"
+                                <label class="p-r-30"
                                     for="standard_field[client_billing_zip]">@lang('lang.zipcode')</label>
                             </div>
                         </div>
@@ -179,7 +179,7 @@
                                 <input type="checkbox" id="standard_field[client_billing_country]"
                                     name="standard_field[client_billing_country]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30"
+                                <label class="p-r-30"
                                     for="standard_field[client_billing_country]">@lang('lang.country')</label>
                             </div>
                         </div>
@@ -191,7 +191,7 @@
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[invoices]" name="standard_field[invoices]"
                                     class="filled-in chk-col-light-blue" checked="checked">
-                                <label class="p-l-30" for="standard_field[invoices]">@lang('lang.invoices')</label>
+                                <label class="p-r-30" for="standard_field[invoices]">@lang('lang.invoices')</label>
                             </div>
                         </div>
                     </div>
@@ -202,7 +202,7 @@
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[payments]" name="standard_field[payments]"
                                     class="filled-in chk-col-light-blue" checked="checked">
-                                <label class="p-l-30" for="standard_field[payments]">@lang('lang.payments')</label>
+                                <label class="p-r-30" for="standard_field[payments]">@lang('lang.payments')</label>
                             </div>
                         </div>
                     </div>
@@ -214,7 +214,7 @@
                                 <input type="checkbox" id="standard_field[client_status]"
                                     name="standard_field[client_status]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30" for="standard_field[client_status]">@lang('lang.status')</label>
+                                <label class="p-r-30" for="standard_field[client_status]">@lang('lang.status')</label>
                             </div>
                         </div>
                     </div>
@@ -222,7 +222,7 @@
 
                 <!--custon fields-->
                 <div class="m-t-30">
-                    <h5>@lang('lang.custom_fields')</h5>
+                    <h5 style="text-align: right;">@lang('lang.custom_fields')</h5>
                 </div>
                 <div class="line"></div>
                 <div class="row">

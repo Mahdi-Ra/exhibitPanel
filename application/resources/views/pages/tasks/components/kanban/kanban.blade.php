@@ -1,4 +1,4 @@
-<div class="boards count-{{ @count($tasks ?? []) }}" id="tasks-view-wrapper">
+<div class="boards {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} count-{{ @count($tasks ?? []) }}" id="tasks-view-wrapper">
     <!--each board-->
     @foreach($boards as $board)
     <!--board-->

@@ -6,7 +6,7 @@
         <!--project-->
         <div class="form-group row">
             <label
-                class="col-sm-12 col-lg-3 text-left control-label col-form-label required">{{ cleanLang(__('lang.project')) }}*</label>
+                class="col-sm-12 col-lg-3 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label required">{{ cleanLang(__('lang.project')) }}*</label>
             <div class="col-sm-12 col-lg-9">
                 <select name="task_projectid" id="task_projectid"
                     class="projects_assigned_toggle projects_assigned_client_toggle form-control form-control-sm js-select2-basic-search-modal select2-hidden-accessible"
@@ -19,7 +19,7 @@
         <!--title-->
         <div class="form-group row">
             <label
-                class="col-sm-12 col-lg-3 text-left control-label col-form-label required">{{ cleanLang(__('lang.title')) }}*</label>
+                class="col-sm-12 col-lg-3 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label required">{{ cleanLang(__('lang.title')) }}*</label>
             <div class="col-sm-12 col-lg-9">
                 <input type="text" class="form-control form-control-sm" id="task_title" name="task_title"
                     placeholder="">
@@ -31,7 +31,7 @@
         @if(config('visibility.task_modal_milestone_option'))
         <div class="form-group row">
             <label
-                class="col-sm-12 col-lg-3 text-left control-label col-form-label required">{{ cleanLang(__('lang.milestone')) }}*</label>
+                class="col-sm-12 col-lg-3 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label required">{{ cleanLang(__('lang.milestone')) }}*</label>
             <div class="col-sm-12 col-lg-9">
                 <select name="task_milestoneid" id="task_milestoneid"
                     class="select2-basic form-control form-control-sm">
@@ -53,7 +53,7 @@
         @else
         <div class="form-group row">
             <label
-                class="col-sm-12 col-lg-3 text-left control-label col-form-label required">{{ cleanLang(__('lang.status')) }}*</label>
+                class="col-sm-12 col-lg-3 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label required">{{ cleanLang(__('lang.status')) }}*</label>
             <div class="col-sm-12 col-lg-9">
                 <select class="select2-basic form-control form-control-sm" id="task_status" name="task_status">
                     @foreach($statuses as $status)
@@ -72,7 +72,7 @@
         <!--task priority-->
         <div class="form-group row">
             <label
-                class="col-sm-12 col-lg-3 text-left control-label col-form-label required">{{ cleanLang(__('lang.priority')) }}*</label>
+                class="col-sm-12 col-lg-3 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label required">{{ cleanLang(__('lang.priority')) }}*</label>
             <div class="col-sm-12 col-lg-9">
                 <select class="select2-basic form-control form-control-sm" id="task_priority" name="task_priority">
                     @foreach($priorities as $priority)
@@ -86,7 +86,7 @@
         @if(auth()->user()->role->role_assign_tasks == 'yes' && config('visibility.tasks_standard_features'))
         <div class="form-group row">
             <label
-                class="col-sm-12 col-lg-3 text-left control-label col-form-label">{{ cleanLang(__('lang.assign_users')) }}
+                class="col-sm-12 col-lg-3 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label">{{ cleanLang(__('lang.assign_users')) }}
                 <a class="align-middle font-16 toggle-collapse" href="#assigning_info" role="button"><i
                         class="ti-info-alt text-themecontrast"></i></a></label>
             <div class="col-sm-12 col-lg-9">
@@ -120,7 +120,7 @@
         <!--assigned [client users]-->
         @if(auth()->user()->role->role_assign_tasks == 'yes' && config('visibility.tasks_standard_features'))
         <div class="form-group row">
-            <label class="col-sm-12 col-lg-3 text-left control-label col-form-label">@lang('lang.assign_client')
+            <label class="col-sm-12 col-lg-3 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label">@lang('lang.assign_client')
                 <a class="align-middle font-16 toggle-collapse" href="#assigning_client_info" role="button"><i
                         class="ti-info-alt text-themecontrast"></i></a></label>
             <div class="col-sm-12 col-lg-9">
@@ -157,11 +157,11 @@
         <div class="line"></div>
         <!--spacer-->
         <div class="spacer row">
-            <div class="col-sm-12 col-lg-8">
+            <div class="col-sm-12 col-lg-8 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
                 <span class="title">{{ cleanLang(__('lang.description')) }}</span class="title">
             </div>
             <div class="col-sm-12 col-lg-4">
-                <div class="switch  text-right">
+                <div class="switch  text-left">
                     <label>
                         <input type="checkbox" name="show_more_settings_tasks" id="show_more_settings_tasks"
                             class="js-switch-toggle-hidden-content" data-target="task_description_section">
@@ -187,11 +187,11 @@
         <!--CUSTOMER FIELDS [collapsed]-->
         @if(config('system.settings_customfields_display_tasks') == 'toggled')
         <div class="spacer row">
-            <div class="col-sm-12 col-lg-8">
+            <div class="col-sm-12 col-lg-8 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
                 <span class="title">{{ cleanLang(__('lang.more_information')) }}</span class="title">
             </div>
             <div class="col-sm-12 col-lg-4">
-                <div class="switch  text-right">
+                <div class="switch  text-left">
                     <label>
                         <input type="checkbox" name="add_client_option_other" id="add_client_option_other"
                             class="js-switch-toggle-hidden-content" data-target="leads_custom_fields_collaped">
@@ -218,11 +218,11 @@
         @if(config('visibility.task_modal_additional_options'))
         <!--spacer-->
         <div class="spacer row">
-            <div class="col-sm-12 col-lg-8">
+            <div class="col-sm-12 col-lg-8 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
                 <span class="title">{{ cleanLang(__('lang.options')) }}</span class="title">
             </div>
             <div class="col-sm-12 col-lg-4">
-                <div class="switch  text-right">
+                <div class="switch  text-left">
                     <label>
                         <input type="checkbox" name="show_more_settings_tasks2" id="show_more_settings_tasks2"
                             class="js-switch-toggle-hidden-content" data-target="additional_information_section">
@@ -239,7 +239,7 @@
             @if(config('visibility.tasks_standard_features'))
             <div class="form-group row">
                 <label
-                    class="col-sm-12 col-lg-3 text-left control-label col-form-label">{{ cleanLang(__('lang.target_date')) }}</label>
+                    class="col-sm-12 col-lg-3 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label">{{ cleanLang(__('lang.target_date')) }}</label>
                 <div class="col-sm-12 col-lg-9">
                     <input type="text" class="form-control form-control-sm pickadate" name="task_date_due"
                         autocomplete="off" placeholder="">
@@ -252,7 +252,7 @@
             <!--tags-->
             <div class="form-group row">
                 <label
-                    class="col-sm-12 col-lg-3 text-left control-label col-form-label">{{ cleanLang(__('lang.tags')) }}</label>
+                    class="col-sm-12 col-lg-3 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label">{{ cleanLang(__('lang.tags')) }}</label>
                 <div class="col-sm-12 col-lg-9">
                     <select name="tags" id="tags"
                         class="form-control form-control-sm select2-multiple {{ runtimeAllowUserTags() }} select2-hidden-accessible"
@@ -279,10 +279,10 @@
             <div class="toggle_task_type add_task_toggle_container_project">
                 <div class="form-group form-group-checkbox row">
                     <div class="col-12 p-t-5">
-                        <div class="pull-left min-w-200">
+                        <div class="pull-right {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} min-w-200">
                             <label>{{ cleanLang(__('lang.visible_to_client')) }}</label>
                         </div>
-                        <div class="pull-left p-l-10">
+                        <div class="pull-right p-l-10">
                             @if(isset($page['section']) && $page['section'] == 'create')
                             <input type="checkbox" id="task_client_visibility" name="task_client_visibility"
                                 {{ runtimeTasksDefaults('task_client_visibility') }}
@@ -298,10 +298,10 @@
                 </div>
                 <div class="form-group form-group-checkbox row">
                     <div class="col-12 p-t-5">
-                        <div class="pull-left min-w-200">
+                        <div class="pull-right {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} min-w-200">
                             <label>{{ cleanLang(__('lang.billable')) }}</label>
                         </div>
-                        <div class="pull-left p-l-10">
+                        <div class="pull-right p-l-10">
                             @if(isset($page['section']) && $page['section'] == 'create')
                             <input type="checkbox" id="task_billable" name="task_billable"
                                 {{ runtimeTasksDefaults('task_billable') }} class="filled-in chk-col-light-blue">
@@ -339,7 +339,7 @@
         <!--notes-->
         <div class="row">
             <div class="col-12">
-                <div><small><strong>* {{ cleanLang(__('lang.required')) }}</strong></small></div>
+                <div class="{{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"><small><strong>* {{ cleanLang(__('lang.required')) }}</strong></small></div>
             </div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 <div class="table-responsive" id="milestone-categories-table">
     @if (@count($milestones ?? []) > 0)
-    <table id="milestone-stages" class="table m-t-0 m-b-0 table-hover no-wrap contact-list" data-page-size="10"
+    <table id="milestone-stages" class="table m-t-0 m-b-0 table-hover no-wrap contact-list {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}" data-page-size="10"
         data-type="form" data-form-id="milestone-stages" data-ajax-type="post"
         data-url="{{ url('settings/milestones/update-positions') }}">
         <thead>

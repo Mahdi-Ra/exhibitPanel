@@ -1,7 +1,7 @@
 @extends('pages.settings.ajaxwrapper')
 @section('settings-page')
 <!--settings-->
-<form class="form" id="settingsFormEmailSMTP">
+<form class="form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}" id="settingsFormEmailSMTP">
 
     <!--smtp host-->
     <div class="form-group row">
@@ -42,7 +42,7 @@
     <!--ensryption-->
     <div class="form-group row">
         <label for="example-month-input"
-            class="col-12 col-form-label text-left">{{ cleanLang(__('lang.encryption')) }}</label>
+            class="col-12 col-form-label">{{ cleanLang(__('lang.encryption')) }}</label>
         <div class="col-12">
             <select class="select2-basic form-control form-control-sm" id="settings_email_smtp_encryption"
                 name="settings_email_smtp_encryption">
@@ -61,7 +61,7 @@
     <!--show error if cronjob has not run before-->
     @if($settings->settings_cronjob_has_run != 'yes')
     <div class="splash-text">
-        <div class="alert alert-danger">{{ cleanLang(__('lang.cronjob_and_emails')) }}. <a
+        <div class="alert alert-danger text-right">{{ cleanLang(__('lang.cronjob_and_emails')) }}. <a
                 href="https://growcrm.io/documentation/cron-job-settings/"
                 target="_blank">@lang('lang.more_information')</a></div>
     </div>
@@ -89,9 +89,9 @@
     <div class="col-12">
         <div class="alert alert-info m-t-40 p-t-30 p-b-30">
             <div class="email-testing-tool-sections" id="email-testing-tool-start">
-                <h5 class="text-info"><i class="sl-icon-info"></i> @lang('lang.email_delivery_problem')</h5>
-                <p class="card-text">@lang('lang.use_tool_to_debug_smtp')</p>
-                <a href="#" class="btn btn-sm btn-primary ajax-request" data-url="{{ url('settings/email/testsmtp') }}"
+                <h5 class="text-info text-right"><i class="sl-icon-info"></i> @lang('lang.email_delivery_problem')</h5>
+                <p class="card-text text-right">@lang('lang.use_tool_to_debug_smtp')</p>
+                <a href="#" class="btn btn-sm btn-primary ajax-request " data-url="{{ url('settings/email/testsmtp') }}"
                     data-onstart-hide="#email-testing-tool-start" data-onstart-show="#email-testing-tool-running"
                     id="">@lang('lang.run_test_now')</a>
             </div>
@@ -148,7 +148,7 @@
 
 @if(config('system.settings_type') == 'standalone')
 <!--[standalone] - settings documentation help-->
-<a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation"><i
+<a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation {{ app()->getLocale() == 'persian_br' ? 'float-right' : 'float-left' }}"><i
         class="ti-info-alt"></i>
     {{ cleanLang(__('lang.help_documentation')) }}
 </a>

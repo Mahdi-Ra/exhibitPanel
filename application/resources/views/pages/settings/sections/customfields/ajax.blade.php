@@ -1,8 +1,8 @@
 @foreach($fields as $field)
 <tr class="toggle-table-settings-row-{{ $field->customfields_id }}">
     <!--title-->
-    <td class="p-r-40">
-        <input type="text" class="form-control form-control-sm x-form-field js-settings-customfiel-input"
+    <td class="p-l-40">
+        <input type="text" class="form-control form-control-sm x-form-field js-settings-customfiel-input float-right"
             id="add_invoices_date" data-settings-button-id="settings-customfiel-options-{{ $field->customfields_id }}"
             name="customfields_title[{{ $field->customfields_id }}]" value="{{ $field->customfields_title }}">
     </td>

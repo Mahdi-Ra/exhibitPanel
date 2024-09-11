@@ -5,11 +5,11 @@
         <div class="card-body p-l-15 p-r-15">
             <div class="d-flex p-10 no-block">
                 <span class="align-slef-center">
-                    <h2 class="m-b-0 text-right"><?php echo e(runtimeMoneyFormat($payload['payments']['today'])); ?></h2>
+                    <h2 class="m-b-0 <?php echo e(app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left'); ?>"><?php echo e(runtimeMoneyFormat($payload['payments']['today'])); ?></h2>
                     <h6 class="text-muted m-b-0"><?php echo e(cleanLang(__('lang.payments'))); ?> -
                         <?php echo e(cleanLang(__('lang.today'))); ?></h6>
                 </span>
-                <div class="align-self-center display-6 mr-auto"><i class="text-success icon-Credit-Card2"></i>
+                <div class="align-self-center display-6 <?php echo e(app()->getLocale() == 'persian_br' ? 'mr-auto' : 'ml-auto'); ?>"><i class="text-success icon-Credit-Card2"></i>
             </div>
             </div>
         </div>

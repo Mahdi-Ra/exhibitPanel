@@ -10,7 +10,7 @@
                     id="reports_tabs_invoices" aria-expanded="false">
                     <span class="hidden-xs-down">{{ cleanLang(__('lang.invoices')) }}</span>
                 </a>
-                <div class="dropdown-menu" x-placement="bottom-start" id="fx-topnav-dropdown">
+                <div class="dropdown-menu {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}" x-placement="bottom-start" id="fx-topnav-dropdown">
                     <!--[overview]-->
                     <a class="dropdown-item js-dynamic-url js-ajax-ux-request" data-toggle="tab"
                         data-loading-class="loading-tabs" data-loading-target="embed-content-container"
@@ -46,7 +46,7 @@
                     id="reports_tabs_estimates" aria-expanded="false">
                     <span class="hidden-xs-down">{{ cleanLang(__('lang.estimates')) }}</span>
                 </a>
-                <div class="dropdown-menu" x-placement="bottom-start" id="fx-topnav-dropdown">
+                <div class="dropdown-menu {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}" x-placement="bottom-start" id="fx-topnav-dropdown">
                     <!--[overview]-->
                     <a class="dropdown-item js-dynamic-url js-ajax-ux-request" data-toggle="tab"
                         data-loading-class="loading-tabs" data-loading-target="embed-content-container"
@@ -82,7 +82,7 @@
                     id="reports_tabs_projects" aria-expanded="false">
                     <span class="hidden-xs-down">{{ cleanLang(__('lang.projects')) }}</span>
                 </a>
-                <div class="dropdown-menu" x-placement="bottom-start" id="fx-topnav-dropdown">
+                <div class="dropdown-menu {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}" x-placement="bottom-start" id="fx-topnav-dropdown">
                     <!--[overview]-->
                     <a class="dropdown-item js-dynamic-url js-ajax-ux-request" data-toggle="tab"
                         data-loading-class="loading-tabs" data-loading-target="embed-content-container"
@@ -112,7 +112,7 @@
                     id="reports_tabs_clients" aria-expanded="false">
                     <span class="hidden-xs-down">{{ cleanLang(__('lang.clients')) }}</span>
                 </a>
-                <div class="dropdown-menu" x-placement="bottom-start" id="fx-topnav-dropdown">
+                <div class="dropdown-menu {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}" x-placement="bottom-start" id="fx-topnav-dropdown">
                     <!--[overview]-->
                     <a class="dropdown-item js-dynamic-url js-ajax-ux-request" data-toggle="tab"
                         data-loading-class="loading-tabs" data-loading-target="embed-content-container"
@@ -130,7 +130,7 @@
                     id="reports_tabs_timesheets" aria-expanded="false">
                     <span class="hidden-xs-down">{{ cleanLang(__('lang.timesheets')) }}</span>
                 </a>
-                <div class="dropdown-menu" x-placement="bottom-start" id="fx-topnav-dropdown">
+                <div class="dropdown-menu {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}" x-placement="bottom-start" id="fx-topnav-dropdown">
                     <!--[team_member]-->
                     <a class="dropdown-item js-dynamic-url js-ajax-ux-request" data-toggle="tab"
                         data-loading-class="loading-tabs" data-loading-target="embed-content-container"
@@ -162,7 +162,7 @@
                     id="reports_tabs_financial" aria-expanded="false">
                     <span class="hidden-xs-down">{{ cleanLang(__('lang.financial')) }}</span>
                 </a>
-                <div class="dropdown-menu" x-placement="bottom-start" id="fx-topnav-dropdown">
+                <div class="dropdown-menu {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}" x-placement="bottom-start" id="fx-topnav-dropdown">
                     <!--[profit and loss]-->
                     <a class="dropdown-item js-dynamic-url js-ajax-ux-request" data-toggle="tab"
                         data-loading-class="loading-tabs" data-loading-target="embed-content-container"

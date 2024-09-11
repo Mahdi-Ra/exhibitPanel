@@ -1,7 +1,7 @@
 @extends('pages.settings.ajaxwrapper')
 @section('settings-page')
 <!--settings-->
-<form class="form">
+<form class="form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
     <!--form text tem-->
     <div class="form-group row">
         <label class="col-12 control-label col-form-label">{{ cleanLang(__('lang.cron_job_command')) }}</label>
@@ -27,7 +27,7 @@
 
 
     <div class="alert alert-danger">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">×</span>
+        <button type="button" class="close float-left" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">×</span>
         </button>
         <h4 class="text-danger">{{ cleanLang(__('lang.cronjob_status')) }}</h4>
         {{ cleanLang(__('lang.cronjob_inactive')) }}
@@ -37,7 +37,7 @@
     @if(config('system.settings_type') == 'standalone')
     <!--[standalone] - settings documentation help-->
     <div>
-        <a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation"><i
+        <a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation {{ app()->getLocale() == 'persian_br' ? 'float-right' : 'float-left' }}"><i
                 class="ti-info-alt"></i>
             {{ cleanLang(__('lang.help_documentation')) }}</a>
     </div>

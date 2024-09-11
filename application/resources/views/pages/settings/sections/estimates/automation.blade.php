@@ -6,7 +6,7 @@
 
     <!--settings2_estimates_automation_default_status-->
     <div class="form-group row p-b-10">
-        <label class="col-sm-12 text-left control-label col-form-label">@lang('lang.estimate_automation_default') <span
+        <label class="col-sm-12 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label">@lang('lang.estimate_automation_default') <span
                 class="align-middle text-info font-16" data-toggle="tooltip"
                 title="@lang('lang.estimate_automation_default_info')" data-placement="top"><i
                     class="ti-info-alt"></i></span></label>
@@ -189,7 +189,7 @@
 
     <!--buttons-->
     <div class="text-right">
-        <button type="submit" id="commonModalSubmitButton" class="btn btn-rounded-x btn-danger waves-effect text-left"
+        <button type="submit" id="commonModalSubmitButton" class="btn btn-rounded-x btn-danger waves-effect text-left float-left"
             data-url="/settings/estimates/automation" data-loading-target="" data-ajax-type="PUT" data-type="form"
             data-on-start-submit-button="disable">{{ cleanLang(__('lang.save_changes')) }}</button>
     </div>
@@ -197,7 +197,7 @@
 
 @if(config('system.settings_type') == 'standalone')
 <!--[standalone] - settings documentation help-->
-<a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation"><i
+<a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation float-right"><i
         class="ti-info-alt"></i>
     {{ cleanLang(__('lang.help_documentation')) }}
 </a>

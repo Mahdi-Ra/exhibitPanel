@@ -21,11 +21,8 @@
     <link href="public/vendor/css/bootstrap/bootstrap.min.css" rel="stylesheet">
 
     <!--GOOGLE FONTS-->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet"
-        type="text/css"> -->
-        <link href="https://fonts.googleapis.com/css2?family=Vazir:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet"
+        type="text/css">
 
     <!--VENDORS CSS-->
     <link rel="stylesheet" href="public/vendor/css/vendor-lite.css?v={{ config('system.versioning') }}">

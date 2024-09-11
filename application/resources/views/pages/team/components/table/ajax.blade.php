@@ -1,34 +1,34 @@
 @foreach( $users as $team)
 <!--each row-->
 <tr id="team_{{ $team->id }}">
-    <td class="team_col_first_name">
+    <td class="team_col_first_name {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
         <img src="{{ $team->avatar }}" alt="user" class="img-circle avatar-xsmall"> {{ $team->first_name }}
         {{ runtimeCheckBlank($team->last_name) }}
         <!--administrator-->
         @if($team->primary_admin == 'yes')
-        <span class="sl-icon-star text-warning p-l-5" data-toggle="tooltip"
+        <span class="sl-icon-star text-warning float-left" data-toggle="tooltip"
             title="{{ cleanLang(__('lang.main_administrator')) }}" id="team_admin_{{ $team->id }}"></span>
         @endif
     </td>
-    <td class="team_col_position">
+    <td class="team_col_position {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
         {{ str_limit(runtimeCheckBlank($team->position), 20) }}
     </td>
     @if(config('visibility.action_super_user'))
-    <td class="team_col_role">{{ runtimeCheckBlank($team->role['role_name']) }}</td>
+    <td class="team_col_role {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">{{ runtimeCheckBlank($team->role['role_name']) }}</td>
     @endif
-    <td class="team_col_email">
+    <td class="team_col_email {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
         {{ runtimeCheckBlank($team->email) }}
     </td>
-    <td class="team_col_phone">
+    <td class="team_col_phone {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
         {{ runtimeCheckBlank($team->phone) }}
     </td>
     @if(config('visibility.action_super_user'))
-    <td class="team_col_last_active">
+    <td class="team_col_last_active {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
         {{ $team->carbon_last_seen }}
     </td>
     @endif
     @if(config('visibility.action_super_user'))
-    <td class="team_col_action">
+    <td class="team_col_action {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
         <!--action buttons-->
         <span class="list-table-action dropdown font-size-inherit">
             <!--delete-->

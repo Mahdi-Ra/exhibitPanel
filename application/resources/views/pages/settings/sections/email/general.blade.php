@@ -1,7 +1,7 @@
 @extends('pages.settings.ajaxwrapper')
 @section('settings-page')
 <!--settings-->
-<form class="form" id="settingsFormEmailGeneral">
+<form class="form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}" id="settingsFormEmailGeneral">
 
     <!--from email address-->
     <div class="form-group row">
@@ -24,7 +24,7 @@
     <!--server type-->
     <div class="form-group row">
         <label for="example-month-input"
-            class="col-12 col-form-label text-left">{{ cleanLang(__('lang.email_delivery')) }}</label>
+            class="col-12 col-form-label">{{ cleanLang(__('lang.email_delivery')) }}</label>
         <div class="col-12">
             <select class="select2-basic form-control form-control-sm" id="settings_email_server_type"
                 name="settings_email_server_type">
@@ -42,7 +42,7 @@
     @if(config('system.settings_type') == 'standalone')
     @if($settings->settings_cronjob_has_run != 'yes')
     <div class="splash-text">
-        <div class="alert alert-danger">{{ cleanLang(__('lang.cronjob_and_emails')) }}. <a
+        <div class="alert alert-danger text-right">{{ cleanLang(__('lang.cronjob_and_emails')) }}. <a
                 href="https://growcrm.io/documentation/cron-job-settings/"
                 target="_blank">@lang('lang.more_information')</a></div>
     </div>
@@ -52,7 +52,7 @@
     <!--buttons-->
     <div class="text-right">
         <!--send a test email-->
-        <button type="button" class="btn btn-info edit-add-modal-button js-ajax-ux-request reset-target-modal-form"
+        <button type="button" class="btn btn-info edit-add-modal-button js-ajax-ux-request reset-target-modal-form {{ app()->getLocale() == 'persian_br' ? 'float-left' : 'float-right' }}"
             data-toggle="modal" data-target="#commonModal" data-url="{{ url('settings/email/testemail') }}"
             data-loading-target="commonModalBody" data-modal-title="Send A Test Email"
             data-action-url="{{ url('settings/email/testemail') }}" data-action-method="POST" data-action-ajax-class=""
@@ -61,7 +61,7 @@
             data-action-ajax-loading-target="commonModalBody">{{ cleanLang(__('lang.send_test_email')) }}
         </button>
         <!--save changes-->
-        <button type="submit" id="email-general-settings-button" class="btn btn-rounded-x btn-danger waves-effect text-left"
+        <button type="submit" id="email-general-settings-button" class="btn btn-rounded-x btn-danger waves-effect text-left {{ app()->getLocale() == 'persian_br' ? 'float-left' : 'float-right' }}"
             data-url="/settings/email/general" data-loading-target="" data-ajax-type="PUT" data-type="form"
             data-on-start-submit-button="disable">{{ cleanLang(__('lang.save_changes')) }}</button>
 
@@ -70,7 +70,7 @@
 
 @if(config('system.settings_type') == 'standalone')
 <!--[standalone] - settings documentation help-->
-<a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation"><i
+<a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation {{ app()->getLocale() == 'persian_br' ? 'float-right' : 'float-left' }}"><i
         class="ti-info-alt"></i>
     {{ cleanLang(__('lang.help_documentation')) }}
 </a>

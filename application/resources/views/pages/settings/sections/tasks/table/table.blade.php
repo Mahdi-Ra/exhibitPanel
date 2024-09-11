@@ -1,6 +1,6 @@
 <div class="table-responsive p-b-30">
     @if (@count($statuses ?? []) > 0)
-    <table id="task-stages" class="table m-t-0 m-b-0 table-hover no-wrap contact-list" data-page-size="10"
+    <table id="task-stages" class="table m-t-0 m-b-0 table-hover no-wrap contact-list {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}" data-page-size="10"
         data-type="form" data-form-id="task-stages" data-ajax-type="post"
         data-url="{{ url('settings/tasks/update-stage-positions') }}">
         <thead>

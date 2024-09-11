@@ -14,7 +14,7 @@
     <form class="form-horizontal form-material" id="forgotPasswordForm">
         <div class="form-group">
             <div class="col-xs-12">
-                <input class="form-control" type="text" name="email" id="email" placeholder="{{ cleanLang(__('lang.email')) }}">
+                <input class="form-control" type="text" name="email" id="email" placeholder="Email">
             </div>
         </div>
         <div class="form-group text-center p-b-10">

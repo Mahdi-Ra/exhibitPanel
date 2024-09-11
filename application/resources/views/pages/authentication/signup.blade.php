@@ -8,7 +8,7 @@
 
 <div class="login-box m-t-20">
     <div class="title">
-        <h3 class="box-title m-t-10 text-center">{{ cleanLang(__('lang.create_new_account')) }}</h3>
+        <h3 class="box-title m-t-10 text-center">Create a new account</h3>
         <div class="text-center  m-b-20 ">
             <small>{{ cleanLang(__('lang.sign_up_for_your_account')) }}</small>
         </div>
@@ -17,36 +17,36 @@
         <div class="form-group m-t-20">
             <div class="col-xs-12">
                 <input class="form-control" type="text" name="first_name" id="first_name"
-                    placeholder="{{ cleanLang(__('lang.first_name')) }}">
+                    placeholder="First name">
             </div>
         </div>
         <div class="form-group m-t-20">
             <div class="col-xs-12">
                 <input class="form-control" type="text" name="last_name" id="last_name"
-                    placeholder="{{ cleanLang(__('lang.last_name')) }}">
+                    placeholder="Last name">
             </div>
         </div>
         <div class="form-group m-t-20">
             <div class="col-xs-12">
                 <input class="form-control" type="text" name="client_company_name" id="client_company_name"
-                    placeholder="{{ cleanLang(__('lang.company_name')) }}">
+                    placeholder="Company name">
             </div>
         </div>
         <div class="form-group ">
             <div class="col-xs-12">
-                <input class="form-control" type="text" name="email" id="email" placeholder="{{ cleanLang(__('lang.email')) }}">
+                <input class="form-control" type="text" name="email" id="email" placeholder="Email">
             </div>
         </div>
         <div class="form-group ">
             <div class="col-xs-12">
                 <input class="form-control" type="password" name="password" id="password"
-                    placeholder="{{ cleanLang(__('lang.password')) }} ({{ cleanLang(__('lang.minimum_six_characters')) }})">
+                    placeholder="Password (minimum 6 characters)">
             </div>
         </div>
         <div class="form-group">
             <div class="col-xs-12">
                 <input class="form-control" type="password" name="password_confirmation" id="password_confirmation"
-                    placeholder="{{ cleanLang(__('lang.confirm_password')) }}">
+                    placeholder="Confirm password">
             </div>
         </div>
         <div class="form-group text-center m-t-20">

@@ -1,7 +1,7 @@
 @extends('pages.settings.ajaxwrapper')
 @section('settings-page')
 <!--settings-->
-<form class="form" id="settingsFormInvoices">
+<form class="form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}" id="settingsFormInvoices">
     <!--form text tem-->
     <div class="form-group row">
         <label class="col-12 control-label col-form-label">{{ cleanLang(__('lang.invoice_prefix')) }}</label>
@@ -92,7 +92,7 @@
 
     <!--buttons-->
     <div class="text-right">
-        <button type="submit" id="commonModalSubmitButton" class="btn btn-rounded-x btn-danger waves-effect text-left"
+        <button type="submit" id="commonModalSubmitButton" class="btn btn-rounded-x btn-danger waves-effect text-left {{ app()->getLocale() == 'persian_br' ? 'float-left' : 'float-right' }}"
             data-url="/settings/invoices" data-loading-target="" data-ajax-type="PUT" data-type="form"
             data-on-start-submit-button="disable">{{ cleanLang(__('lang.save_changes')) }}</button>
     </div>

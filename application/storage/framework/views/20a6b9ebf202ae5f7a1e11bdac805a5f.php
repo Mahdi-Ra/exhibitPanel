@@ -1,7 +1,7 @@
-<div class="chat-right-aside" id="messages_right_text_wrapper">
+<div class="chat-right-aside <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl-chat-right' : 'ltr-chat-right'); ?>" id="messages_right_text_wrapper">
 
     <!--feed container-->
-    <div class="chat-rbox" id="feed_container" data-autoload="no" data-url="" data-form-id="feed_container_data"
+    <div class="chat-rbox <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl-chat-rbox' : 'ltr-chat-rbox'); ?>" id="feed_container" data-autoload="no" data-url="" data-form-id="feed_container_data"
         data-ajax-type="post" data-loading-target="chat-messages-container-spacer">
         <!--(dynamic) defaults will be auto reset-->
         <div id="feed_container_data">
@@ -26,7 +26,7 @@
 
         <!--submit button-->
         <button type="button" id="messaging_submit_button"
-            class="btn btn-danger btn-icon-circle messaging_submit_button ajax-request"
+            class="btn btn-danger btn-icon-circle messaging_submit_button ajax-request <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl_messaging_submit_button' : 'ltr_messaging_submit_button'); ?>"
             data-loading-target="chat-messages-container" data-progress-bar="hidden"
             data-url="<?php echo e(url('/messages/post/text')); ?>" data-type="form" data-ajax-type="post"
             data-form-id="messaging_submit_container" data-loading-target="comments-container">
@@ -35,7 +35,7 @@
 
         <!--upload files button-->
         <button type="button" id="messaging_file_upload_button"
-            class="btn btn-info btn-icon-circle messaging_file_upload_button">
+            class="btn btn-info btn-icon-circle messaging_file_upload_button <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl_messaging_file_upload_button' : 'ltr_messaging_file_upload_button'); ?>">
             <i class="sl-icon-paper-clip"></i>
         </button>
 

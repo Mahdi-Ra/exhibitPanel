@@ -2,11 +2,11 @@
 <?php if($event->event_show_in_timeline == 'yes'): ?>
 <!--each events item-->
 <div class="sl-item timeline">
-    <div class="sl-left">
+    <div class="sl-left <?php echo e(app()->getLocale() == 'persian_br' ? 'sl-right-dir' : 'sl-left-dir'); ?>">
         <img src="<?php echo e(getUsersAvatar($event->avatar_directory, $event->avatar_filename, $event->event_creatorid)); ?>" alt="user"
             class="img-circle" />
     </div>
-    <div class="sl-right">
+    <div class="sl-right <?php echo e(app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left'); ?>">
         <div>
             <div class="x-meta"><a href="javascript:void(0)" class="link">
                 <?php if($event->event_creatorid == 0 || $event->event_creatorid == -1): ?>
@@ -22,7 +22,7 @@
                     <?php echo e($event->first_name ?? runtimeUnkownUser()); ?>
 
                 <?php endif; ?>
-            </a> <span class="sl-date"><?php echo e(runtimeDateAgo($event->event_created)); ?></span>
+            </a> <span class="sl-date <?php echo e(app()->getLocale() == 'persian_br' ? 'float-left' : 'float-right'); ?>"><?php echo e(runtimeDateAgo($event->event_created)); ?></span>
             </div>
             <div class="x-title">
                 <!--assigned event - viewed by third party-->

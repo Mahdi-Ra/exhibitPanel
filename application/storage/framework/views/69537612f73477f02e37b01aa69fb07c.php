@@ -16,10 +16,10 @@
 
                 <!--standard fields-->
                 <div class="">
-                    <h5><?php echo app('translator')->get('lang.standard_fields'); ?></h5>
+                    <h5 style="text-align: right;"><?php echo app('translator')->get('lang.standard_fields'); ?></h5>
                 </div>
                 <div class="line"></div>
-                <div class="row">
+                <div class="row text-right">
 
                     <!--client_company_name-->
                     <div class="col-sm-12 col-lg-6">
@@ -28,7 +28,7 @@
                                 <input type="checkbox" id="standard_field[client_company_name]"
                                     name="standard_field[client_company_name]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30"
+                                <label class="p-r-30"
                                     for="standard_field[client_company_name]"><?php echo app('translator')->get('lang.client_name'); ?></label>
                             </div>
                         </div>
@@ -41,7 +41,7 @@
                                 <input type="checkbox" id="standard_field[client_created]"
                                     name="standard_field[client_created]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30"
+                                <label class="p-r-30"
                                     for="standard_field[client_created]"><?php echo app('translator')->get('lang.date_created'); ?></label>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[category]" name="standard_field[category]"
                                     class="filled-in chk-col-light-blue" checked="checked">
-                                <label class="p-l-30" for="standard_field[category]"><?php echo app('translator')->get('lang.category'); ?></label>
+                                <label class="p-r-30" for="standard_field[category]"><?php echo app('translator')->get('lang.category'); ?></label>
                             </div>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                                 <input type="checkbox" id="standard_field[contact_name]"
                                     name="standard_field[contact_name]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30"
+                                <label class="p-r-30"
                                     for="standard_field[contact_name]"><?php echo app('translator')->get('lang.contact_name'); ?></label>
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                                 <input type="checkbox" id="standard_field[contact_email]"
                                     name="standard_field[contact_email]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30"
+                                <label class="p-r-30"
                                     for="standard_field[contact_email]"><?php echo app('translator')->get('lang.contact_email'); ?></label>
                             </div>
                         </div>
@@ -92,7 +92,7 @@
                                 <input type="checkbox" id="standard_field[client_phone]"
                                     name="standard_field[client_phone]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30" for="standard_field[client_phone]"><?php echo app('translator')->get('lang.telephone'); ?></label>
+                                <label class="p-r-30" for="standard_field[client_phone]"><?php echo app('translator')->get('lang.telephone'); ?></label>
                             </div>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
                                 <input type="checkbox" id="standard_field[client_website]"
                                     name="standard_field[client_website]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30" for="standard_field[client_website]"><?php echo app('translator')->get('lang.website'); ?></label>
+                                <label class="p-r-30" for="standard_field[client_website]"><?php echo app('translator')->get('lang.website'); ?></label>
                             </div>
                         </div>
                     </div>
@@ -115,7 +115,7 @@
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[client_vat]" name="standard_field[client_vat]"
                                     class="filled-in chk-col-light-blue" checked="checked">
-                                <label class="p-l-30"
+                                <label class="p-r-30"
                                     for="standard_field[client_vat]"><?php echo app('translator')->get('lang.vat_tax_number'); ?></label>
                             </div>
                         </div>
@@ -128,7 +128,7 @@
                                 <input type="checkbox" id="standard_field[client_billing_street]"
                                     name="standard_field[client_billing_street]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30"
+                                <label class="p-r-30"
                                     for="standard_field[client_billing_street]"><?php echo app('translator')->get('lang.street'); ?></label>
                             </div>
                         </div>
@@ -141,7 +141,7 @@
                                 <input type="checkbox" id="standard_field[client_billing_city]"
                                     name="standard_field[client_billing_city]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30"
+                                <label class="p-r-30"
                                     for="standard_field[client_billing_city]"><?php echo app('translator')->get('lang.city'); ?></label>
                             </div>
                         </div>
@@ -154,7 +154,7 @@
                                 <input type="checkbox" id="standard_field[client_billing_state]"
                                     name="standard_field[client_billing_state]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30"
+                                <label class="p-r-30"
                                     for="standard_field[client_billing_state]"><?php echo app('translator')->get('lang.state'); ?></label>
                             </div>
                         </div>
@@ -167,7 +167,7 @@
                                 <input type="checkbox" id="standard_field[client_billing_zip]"
                                     name="standard_field[client_billing_zip]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30"
+                                <label class="p-r-30"
                                     for="standard_field[client_billing_zip]"><?php echo app('translator')->get('lang.zipcode'); ?></label>
                             </div>
                         </div>
@@ -180,7 +180,7 @@
                                 <input type="checkbox" id="standard_field[client_billing_country]"
                                     name="standard_field[client_billing_country]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30"
+                                <label class="p-r-30"
                                     for="standard_field[client_billing_country]"><?php echo app('translator')->get('lang.country'); ?></label>
                             </div>
                         </div>
@@ -192,7 +192,7 @@
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[invoices]" name="standard_field[invoices]"
                                     class="filled-in chk-col-light-blue" checked="checked">
-                                <label class="p-l-30" for="standard_field[invoices]"><?php echo app('translator')->get('lang.invoices'); ?></label>
+                                <label class="p-r-30" for="standard_field[invoices]"><?php echo app('translator')->get('lang.invoices'); ?></label>
                             </div>
                         </div>
                     </div>
@@ -203,7 +203,7 @@
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[payments]" name="standard_field[payments]"
                                     class="filled-in chk-col-light-blue" checked="checked">
-                                <label class="p-l-30" for="standard_field[payments]"><?php echo app('translator')->get('lang.payments'); ?></label>
+                                <label class="p-r-30" for="standard_field[payments]"><?php echo app('translator')->get('lang.payments'); ?></label>
                             </div>
                         </div>
                     </div>
@@ -215,7 +215,7 @@
                                 <input type="checkbox" id="standard_field[client_status]"
                                     name="standard_field[client_status]" class="filled-in chk-col-light-blue"
                                     checked="checked">
-                                <label class="p-l-30" for="standard_field[client_status]"><?php echo app('translator')->get('lang.status'); ?></label>
+                                <label class="p-r-30" for="standard_field[client_status]"><?php echo app('translator')->get('lang.status'); ?></label>
                             </div>
                         </div>
                     </div>
@@ -223,7 +223,7 @@
 
                 <!--custon fields-->
                 <div class="m-t-30">
-                    <h5><?php echo app('translator')->get('lang.custom_fields'); ?></h5>
+                    <h5 style="text-align: right;"><?php echo app('translator')->get('lang.custom_fields'); ?></h5>
                 </div>
                 <div class="line"></div>
                 <div class="row">

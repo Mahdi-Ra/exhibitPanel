@@ -1,4 +1,4 @@
-<div class="count-{{ @count($projects ?? []) }}" id="projects-view-wrapper">
+<div class="count-{{ @count($projects ?? []) }} {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}" id="projects-view-wrapper">
     <div class="card">
         <div class="card-body">
             <div class="table-responsive list-table-wrapper">

@@ -1,6 +1,6 @@
 <div class="col-lg-4  col-md-12">
     <div class="card">
-        <div class="card card-body mailbox m-b-0 text-right">
+        <div class="card card-body mailbox m-b-0 <?php echo e(app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left'); ?>">
             <h5 class="card-title"><?php echo e(cleanLang(__('lang.projects'))); ?></h5>
             <div class="message-center dashboard-projects-admin">
                 <!-- not started -->

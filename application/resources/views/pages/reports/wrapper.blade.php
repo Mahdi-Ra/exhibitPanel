@@ -19,7 +19,7 @@
         </div>
 
         <!--filter panel-->
-        <div class="col-md-12  col-lg-6 align-self-center text-right reports-list-page-actions-container"
+        <div class="col-md-12  col-lg-6 align-self-center text-left reports-list-page-actions-container"
             id="reports-list-page-actions-container">
             <div id="list-page-actions">
                 <!--dynamic-->

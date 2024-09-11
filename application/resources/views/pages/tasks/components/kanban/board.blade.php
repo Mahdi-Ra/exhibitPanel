@@ -1,7 +1,7 @@
 <div class="board">
     <div class="board-body {{ runtimeKanbanBoardColors($board['color']) }}">
         <div class="board-heading clearfix">
-            <div class="pull-left">{{ runtimeLang($board['name']) }}</div>
+            <div class="pull-right">{{ runtimeLang($board['name']) }}</div>
             <div class="pull-right x-action-icons">
                 <!--action add-->
                 @if(config('visibility.kanban_board_add_buttons'))

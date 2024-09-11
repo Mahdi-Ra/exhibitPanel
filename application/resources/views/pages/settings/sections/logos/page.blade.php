@@ -6,7 +6,7 @@
     <div class="col-md-6">
         <div class="card card-outline-warning">
             <div class="card-header fx-settings-logo-card">
-                <h4 class="m-b-0">{{ cleanLang(__('lang.large_logo')) }}</h4>
+                <h4 class="m-b-0 text-right">{{ cleanLang(__('lang.large_logo')) }}</h4>
             </div>
             <div class="card-body text-center">
                 <div class="p-b-20"> <img class="logo-large display-inline-block" src="{{ runtimeLogoLarge() }}"
@@ -34,7 +34,7 @@
     <div class="col-md-6">
         <div class="card card-outline-warning">
             <div class="card-header fx-settings-logo-card">
-                <h4 class="m-b-0">{{ cleanLang(__('lang.small_logo')) }}</h4>
+                <h4 class="m-b-0 text-right">{{ cleanLang(__('lang.small_logo')) }}</h4>
             </div>
             <div class="card-body text-center">
                 <div class="p-b-20"> <img class="logo-small display-inline-block" src="{{ runtimeLogoSmall() }}"
@@ -61,7 +61,7 @@
 
 @if(config('system.settings_type') == 'standalone')
 <!--[standalone] - settings documentation help-->
-<a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation"><i
+<a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation float-right"><i
         class="ti-info-alt"></i>
     {{ cleanLang(__('lang.help_documentation')) }}
 </a>

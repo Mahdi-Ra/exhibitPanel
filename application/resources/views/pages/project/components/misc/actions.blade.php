@@ -1,5 +1,5 @@
 <!--CRUMBS CONTAINER (RIGHT)-->
-<div class="col-md-12  col-lg-6 align-self-center text-right parent-page-actions p-b-9"
+<div class="col-md-12  col-lg-6 align-self-center {{ app()->getLocale() == 'persian_br' ? 'text-left' : 'text-right' }} parent-page-actions p-b-9"
     id="list-page-actions-container">
     <div id="list-page-actions">
 
@@ -39,7 +39,7 @@
 
             <div class="dropdown-menu" aria-labelledby="listTableAction">
                 <!--edit-->
-                <a class="dropdown-item edit-add-modal-button js-ajax-ux-request reset-target-modal-form"
+                <a class="dropdown-item edit-add-modal-button js-ajax-ux-request reset-target-modal-form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"
                     href="javascript:void(0)" data-toggle="modal" data-target="#commonModal"
                     data-url="{{ urlResource('/projects/'.$project->project_id.'/edit') }}"
                     data-loading-target="commonModalBody" data-modal-title="{{ cleanLang(__('lang.edit_project')) }}"
@@ -50,7 +50,7 @@
 
 
                 <!--update progress-->
-                <a class="dropdown-item actions-modal-button js-ajax-ux-request reset-target-modal-form"
+                <a class="dropdown-item actions-modal-button js-ajax-ux-request reset-target-modal-form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"
                     href="javascript:void(0)" data-toggle="modal" data-target="#actionsModal"
                     data-modal-title="{{ cleanLang(__('lang.update_progress')) }}"
                     data-url="{{ url('/projects/'.$project->project_id.'/progress?ref=page') }}"
@@ -60,7 +60,7 @@
 
 
                 <!--change category-->
-                <a class="dropdown-item actions-modal-button js-ajax-ux-request reset-target-modal-form"
+                <a class="dropdown-item actions-modal-button js-ajax-ux-request reset-target-modal-form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"
                     href="javascript:void(0)" data-toggle="modal" data-target="#actionsModal"
                     data-modal-title="{{ cleanLang(__('lang.change_category')) }}"
                     data-url="{{ url('/projects/change-category') }}"
@@ -69,7 +69,7 @@
                     {{ cleanLang(__('lang.change_category')) }}</a>
 
                 <!--change status-->
-                <a class="dropdown-item actions-modal-button js-ajax-ux-request reset-target-modal-form"
+                <a class="dropdown-item actions-modal-button js-ajax-ux-request reset-target-modal-form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"
                     href="javascript:void(0)" data-toggle="modal" data-target="#actionsModal"
                     data-modal-title="{{ cleanLang(__('lang.change_status')) }}"
                     data-url="{{ urlResource('/projects/'.$project->project_id.'/change-status') }}"
@@ -77,7 +77,7 @@
                     data-loading-target="actionsModalBody" data-action-method="POST">
                     {{ cleanLang(__('lang.change_status')) }}</a>
                 <!--stop all timers-->
-                <a href="javascript:void(0)" class="dropdown-item confirm-action-danger"
+                <a href="javascript:void(0)" class="dropdown-item confirm-action-danger {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"
                     data-confirm-title="{{ cleanLang(__('lang.stop_all_timers')) }}"
                     data-confirm-text="{{ cleanLang(__('lang.are_you_sure')) }}" data-ajax-type="PUT"
                     data-url="{{ urlResource('/projects/'.$project->project_id.'/stop-all-timers') }}">
@@ -86,7 +86,7 @@
 
                 <!--archive-->
                 @if($project->project_active_state == 'active')
-                <a href="javascript:void(0)" class="dropdown-item confirm-action-info"
+                <a href="javascript:void(0)" class="dropdown-item confirm-action-info {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"
                     data-confirm-title="{{ cleanLang(__('lang.archive_project')) }}"
                     data-confirm-text="{{ cleanLang(__('lang.are_you_sure')) }}" data-ajax-type="PUT"
                     data-url="{{ url('/projects/'.$project->project_id.'/archive?ref=page') }}">
@@ -96,7 +96,7 @@
 
                 <!--activate-->
                 @if($project->project_active_state == 'archived')
-                <a href="javascript:void(0)" class="dropdown-item confirm-action-info"
+                <a href="javascript:void(0)" class="dropdown-item confirm-action-info {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"
                     data-confirm-title="{{ cleanLang(__('lang.restore_project')) }}"
                     data-confirm-text="{{ cleanLang(__('lang.are_you_sure')) }}" data-ajax-type="PUT"
                     data-url="{{ url('/projects/'.$project->project_id.'/activate?ref=page') }}">
@@ -107,7 +107,7 @@
 
                 <!--change cover image-->
                 @if(config('visibility.edit_project_cover_image'))
-                <a class="dropdown-item js-ajax-ux-request edit-add-modal-button js-ajax-ux-request reset-target-modal-form"
+                <a class="dropdown-item js-ajax-ux-request edit-add-modal-button js-ajax-ux-request reset-target-modal-form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"
                     href="javascript:void(0)" data-toggle="modal" data-target="#commonModal"
                     data-modal-title="{{ cleanLang(__('lang.change_cover_image')) }}"
                     data-url="{{ urlResource('/projects/'.$project->project_id.'/change-cover-image') }}"
@@ -118,7 +118,7 @@
 
                 <!--automation-->
                 <a href="javascript:void(0)"
-                    class="dropdown-item edit-add-modal-button js-ajax-ux-request reset-target-modal-form"
+                    class="dropdown-item edit-add-modal-button js-ajax-ux-request reset-target-modal-form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"
                     data-toggle="modal" data-target="#commonModal"
                     data-url="{{ urlResource('/projects/'.$project->project_id.'/edit-automation?ref=list') }}"
                     data-loading-target="commonModalBody" data-modal-title="@lang('lang.project_automation')"

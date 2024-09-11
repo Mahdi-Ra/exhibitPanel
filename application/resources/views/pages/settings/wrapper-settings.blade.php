@@ -15,7 +15,17 @@
         <!--top nav-->
 
         <!--page wrapper-->
-        <div class="page-wrapper" id="settings-wrapper">
+        <div class="page-wrapper {{ app()->getLocale() == 'persian_br' ? 'right-direction' : 'left-direction' }}" id="settings-wrapper" style="margin-left: 210px;">
+        <style>
+               @media (min-width: 1024px) {
+                .left-direction {
+                    margin-left: 210px;
+                    }
+                    /*.right-direction {
+                    margin-left: 210px;
+                    }*/
+                }
+            </style>
 
             <!--overlay-->
             <div class="page-wrapper-overlay js-close-side-panels hidden" data-target=""></div>

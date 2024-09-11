@@ -1,7 +1,7 @@
 @extends('pages.settings.ajaxwrapper')
 @section('settings-page')
 <!--settings-->
-<form class="form">
+<form class="form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
     <!--form text tem-->
     <div class="form-group row">
         <label class="col-12 control-label col-form-label">{{ cleanLang(__('lang.estimate_prefix')) }}</label>

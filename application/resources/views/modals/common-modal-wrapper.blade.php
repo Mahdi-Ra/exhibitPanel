@@ -5,7 +5,7 @@
             <div class="modal-content">
                 <div class="modal-header" id="commonModalHeader">
                     <h4 class="modal-title" id="commonModalTitle"></h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                    <button type="button" class="close {{ app()->getLocale() == 'persian_br' ? 'rtl-close' : 'ltr-close' }}" data-dismiss="modal" aria-hidden="true"
                         id="commonModalCloseIcon">
                         <i class="ti-close"></i>
                     </button>

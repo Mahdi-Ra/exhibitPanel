@@ -1,11 +1,11 @@
 @extends('pages.settings.ajaxwrapper')
 @section('settings-page')
 <!--settings-->
-<form class="form" id="settingsFormGeneral">
+<form class="form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}" id="settingsFormGeneral">
 
     <!--[reports] - truncate long title-->
     <div class="form-group form-group-checkbox row">
-        <label class="col-10 col-form-label text-left">@lang('lang.reports') - @lang('lang.truncate_long_text')</label>
+        <label class="col-10 col-form-label">@lang('lang.reports') - @lang('lang.truncate_long_text')</label>
         <div class="col-2 text-right p-t-5">
             <input type="checkbox" id="settings2_tweak_reports_truncate_long_text" name="settings2_tweak_reports_truncate_long_text" class="filled-in chk-col-light-blue" {{ runtimePrechecked($settings->settings2_tweak_reports_truncate_long_text ?? '') }}>
             <label class="p-l-30" for="settings2_tweak_reports_truncate_long_text"></label>
@@ -15,7 +15,7 @@
 
     <!--[reports] - truncate long title-->
     <div class="form-group form-group-checkbox row">
-        <label class="col-10 col-form-label text-left">@lang('lang.login_brute_force_protection'))</label>
+        <label class="col-10 col-form-label">@lang('lang.login_brute_force_protection'))</label>
         <div class="col-2 text-right p-t-5">
             <input type="checkbox" id="settings2_tweak_login_brute_force_protection" name="settings2_tweak_login_brute_force_protection" class="filled-in chk-col-light-blue" {{ runtimePrechecked($settings->settings2_tweak_login_brute_force_protection ?? '') }}>
             <label class="p-l-30" for="settings2_tweak_login_brute_force_protection"></label>

@@ -4,7 +4,7 @@
 <form class="form">
     <!--form text tem-->
     <div class="form-group row">
-        <label class="col-12 control-label col-form-label">{{ cleanLang(__('lang.contract_prefix')) }}</label>
+        <label class="col-12 control-label col-form-label {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">{{ cleanLang(__('lang.contract_prefix')) }}</label>
         <div class="col-12">
             <input type="text" class="form-control form-control-sm" id="settings_contracts_prefix"
                 name="settings_contracts_prefix" value="{{ $settings->settings_contracts_prefix ?? '' }}">
@@ -13,7 +13,7 @@
 
     <!--next id-->
     <div class="form-group row">
-        <label class="col-12 control-label col-form-label">@lang('lang.next_id_number_contract')
+        <label class="col-12 control-label col-form-label {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">@lang('lang.next_id_number_contract')
             (@lang('lang.optional'))
             <!--info tooltip-->
             <span class="align-middle text-themecontrast" data-toggle="tooltip"
@@ -28,7 +28,7 @@
     @if(config('system.settings_type') == 'standalone')
     <!--[standalone] - settings documentation help-->
     <div>
-        <a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation"><i
+        <a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation {{ app()->getLocale() == 'persian_br' ? 'float-right' : 'float-left' }}"><i
                 class="ti-info-alt"></i>
             {{ cleanLang(__('lang.help_documentation')) }}</a>
     </div>
@@ -37,7 +37,7 @@
     <!--buttons-->
     <div class="text-right">
         <button type="submit" id="commonModalSubmitButton"
-            class="btn btn-rounded-x btn-danger waves-effect text-left js-ajax-ux-request"
+            class="btn btn-rounded-x btn-danger waves-effect text-left js-ajax-ux-request {{ app()->getLocale() == 'persian_br' ? 'float-left' : 'float-right' }}"
             data-url="/settings/contracts" data-loading-target="" data-ajax-type="PUT" data-type="form"
             data-on-start-submit-button="disable">{{ cleanLang(__('lang.save_changes')) }}</button>
     </div>

@@ -1,7 +1,7 @@
 @foreach($roles as $role)
 <!--each row-->
 <tr id="role_{{ $role->role_id }}">
-    <td class="roles_col_name">
+    <td class="roles_col_name {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
         {{ $role->role_name }}
         <!--default-->
         @if($role->role_system == 'yes')

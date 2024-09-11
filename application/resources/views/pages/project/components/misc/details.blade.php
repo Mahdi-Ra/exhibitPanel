@@ -34,7 +34,7 @@
     </div>
     @endif
 
-    <div class="card-body p-t-10 p-b-10" id="project_progress_container">
+    <div class="card-body p-t-10 p-b-10 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}" id="project_progress_container">
         <!--project progress-->
         <div class="d-flex no-block">
             <div class="align-self-end no-shrink">
@@ -51,7 +51,7 @@
                 <h6 class="text-muted">{{ cleanLang(__('lang.project_progress')) }}</h6>
                 @endif
             </div>
-            <div class="ml-auto">
+            <div class="{{ app()->getLocale() == 'persian_br' ? 'mr-auto' : 'ml-auto' }}">
                 <div id="project_progress_chart"></div>
             </div>
         </div>
@@ -85,7 +85,7 @@
     <div class="m-t-10 m-b-10">
         <hr>
     </div>
-    <div class="card-body p-t-0 p-b-0">
+    <div class="card-body p-t-0 p-b-0 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
         <!--[client details]-->
         @if(auth()->user()->is_team)
         <div class="p-b-20">
@@ -155,7 +155,7 @@
         <hr>
     </div>
     <!--dates-->
-    <div class="card-body p-t-0 p-b-0">
+    <div class="card-body p-t-0 p-b-0 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
         <div class="row">
             <div class="col-sm-6">
                 <div>
@@ -188,7 +188,7 @@
     </div>
     <!--billing details-->
     @if(config('visibility.project_billing_summary'))
-    <div class="card-body p-t-0 p-b-0">
+    <div class="card-body p-t-0 p-b-0 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
         <div class="row">
             <div class="col-sm-6">
                 <div>
@@ -226,7 +226,7 @@
     <div class="m-t-10 m-b-10">
         <hr>
     </div>
-    <div class="card-body p-t-0 p-b-0">
+    <div class="card-body p-t-0 p-b-0 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
         <div>
             <table class="table no-border m-b-0">
                 <tbody>

@@ -16,7 +16,7 @@
 
                 <!--standard fields-->
                 <div class="">
-                    <h5>@lang('lang.standard_fields')</h5>
+                    <h5 class="text-right">@lang('lang.standard_fields')</h5>
                 </div>
                 <div class="line"></div>
                 <div class="row">
@@ -24,7 +24,7 @@
                     <!--timesheet_user-->
                     <div class="col-sm-12 col-lg-6">
                         <div class="form-group form-group-checkbox row">
-                            <div class="col-12 p-t-5">
+                            <div class="col-12 p-t-5 text-right">
                                 <input type="checkbox" id="standard_field[timesheet_user]"
                                     name="standard_field[timesheet_user]" class="filled-in chk-col-light-blue"
                                     checked="checked">
@@ -37,7 +37,7 @@
                     <!--timesheet_client-->
                     <div class="col-sm-12 col-lg-6">
                         <div class="form-group form-group-checkbox row">
-                            <div class="col-12 p-t-5">
+                            <div class="col-12 p-t-5 text-right">
                                 <input type="checkbox" id="standard_field[timesheet_client]"
                                     name="standard_field[timesheet_client]" class="filled-in chk-col-light-blue"
                                     checked="checked">
@@ -51,7 +51,7 @@
                     <!--timesheet_client_id-->
                     <div class="col-sm-12 col-lg-6">
                         <div class="form-group form-group-checkbox row">
-                            <div class="col-12 p-t-5">
+                            <div class="col-12 p-t-5 text-right">
                                 <input type="checkbox" id="standard_field[timesheet_client_id]"
                                     name="standard_field[timesheet_client_id]" class="filled-in chk-col-light-blue"
                                     checked="checked">
@@ -64,7 +64,7 @@
                     <!--timesheet_task-->
                     <div class="col-sm-12 col-lg-6">
                         <div class="form-group form-group-checkbox row">
-                            <div class="col-12 p-t-5">
+                            <div class="col-12 p-t-5 text-right">
                                 <input type="checkbox" id="standard_field[timesheet_task]"
                                     name="standard_field[timesheet_task]" class="filled-in chk-col-light-blue"
                                     checked="checked">
@@ -76,7 +76,7 @@
                     <!--timesheet_project-->
                     <div class="col-sm-12 col-lg-6">
                         <div class="form-group form-group-checkbox row">
-                            <div class="col-12 p-t-5">
+                            <div class="col-12 p-t-5 text-right">
                                 <input type="checkbox" id="standard_field[timesheet_project]"
                                     name="standard_field[timesheet_project]" class="filled-in chk-col-light-blue"
                                     checked="checked">
@@ -89,7 +89,7 @@
                     <!--timesheet_project_id-->
                     <div class="col-sm-12 col-lg-6">
                         <div class="form-group form-group-checkbox row">
-                            <div class="col-12 p-t-5">
+                            <div class="col-12 p-t-5 text-right">
                                 <input type="checkbox" id="standard_field[timesheet_project_id]"
                                     name="standard_field[timesheet_project_id]" class="filled-in chk-col-light-blue"
                                     checked="checked">
@@ -102,7 +102,7 @@
                     <!--timesheet_date-->
                     <div class="col-sm-12 col-lg-6">
                         <div class="form-group form-group-checkbox row">
-                            <div class="col-12 p-t-5">
+                            <div class="col-12 p-t-5 text-right">
                                 <input type="checkbox" id="standard_field[timesheet_date]"
                                     name="standard_field[timesheet_date]" class="filled-in chk-col-light-blue"
                                     checked="checked">
@@ -114,7 +114,7 @@
                     <!--timesheet_time-->
                     <div class="col-sm-12 col-lg-6">
                         <div class="form-group form-group-checkbox row">
-                            <div class="col-12 p-t-5">
+                            <div class="col-12 p-t-5 text-right">
                                 <input type="checkbox" id="standard_field[timesheet_time]"
                                     name="standard_field[timesheet_time]" class="filled-in chk-col-light-blue"
                                     checked="checked">

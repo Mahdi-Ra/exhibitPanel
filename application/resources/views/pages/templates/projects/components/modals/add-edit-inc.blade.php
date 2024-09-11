@@ -1,7 +1,7 @@
 <!--title<>-->
 <div class="form-group row">
     <label
-        class="col-sm-12 col-lg-3 text-left control-label col-form-label required">{{ cleanLang(__('lang.project_title')) }}*</label>
+        class="col-sm-12 col-lg-3 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label required">{{ cleanLang(__('lang.project_title')) }}*</label>
     <div class="col-sm-12 col-lg-9">
         <input type="text" class="form-control form-control-sm" id="project_title" name="project_title" placeholder=""
             value="{{ $project->project_title ?? '' }}">
@@ -12,7 +12,7 @@
 <!--category-->
 <div class="form-group row">
     <label for="example-month-input"
-        class="col-sm-12 col-lg-3 col-form-label text-left required">{{ cleanLang(__('lang.category')) }}</label>
+        class="col-sm-12 col-lg-3 col-form-label {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} required">{{ cleanLang(__('lang.category')) }}</label>
     <div class="col-sm-12 col-lg-9">
         <select class="select2-basic form-control form-control-sm" id="project_categoryid" name="project_categoryid">
             @foreach($categories as $category)
@@ -32,7 +32,7 @@
 
 <!--project manager<>-->
 <div class="form-group row hidden">
-    <label class="col-sm-12 col-lg-3 text-left control-label col-form-label">{{ cleanLang(__('lang.manager')) }}
+    <label class="col-sm-12 col-lg-3 text-right control-label col-form-label">{{ cleanLang(__('lang.manager')) }}
         <a class="align-middle font-14 toggle-collapse" href="#project_manager_info" role="button"><i
                 class="ti-info-alt text-themecontrast"></i></a></label>
     <div class="col-sm-12 col-lg-9">
@@ -58,7 +58,7 @@
 <!--assigned team members<>-->
 <div class="form-group row hidden">
     <label
-        class="col-sm-12 col-lg-3 text-left control-label col-form-label">{{ cleanLang(__('lang.assigned')) }}</label>
+        class="col-sm-12 col-lg-3 text-right control-label col-form-label">{{ cleanLang(__('lang.assigned')) }}</label>
     <div class="col-sm-12 col-lg-9">
         <select name="assigned" id="assigned"
             class="form-control form-control-sm select2-basic select2-multiple select2-tags select2-hidden-accessible"
@@ -83,11 +83,11 @@
 
 <!--edit description- toggle<>-->
 <div class="spacer row">
-    <div class="col-sm-8">
+    <div class="col-sm-8 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
         <span class="title">Project {{ cleanLang(__('lang.description')) }}</span class="title">
     </div>
     <div class="col-sm-12 col-lg-4">
-        <div class="switch  text-right">
+        <div class="switch  text-left">
             <label>
                 <input type="checkbox" class="js-switch-toggle-hidden-content"
                     data-target="edit_project_description_toggle">
@@ -108,11 +108,11 @@
 
 <!--spacer-->
 <div class="spacer row">
-    <div class="col-sm-8">
+    <div class="col-sm-8 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
         <span class="title">{{ cleanLang(__('lang.assigned_user_permissions')) }}</span>
     </div>
     <div class="col-sm-4">
-        <div class="switch  text-right">
+        <div class="switch  text-left">
             <label>
                 <input type="checkbox" name="show_more_settings_projects" id="show_more_settings_projects"
                     class="js-switch-toggle-hidden-content" data-target="edit_project_assigned_permissions">
@@ -148,11 +148,11 @@
 
 <!--spacer-->
 <div class="spacer row">
-    <div class="col-sm-8">
+    <div class="col-sm-8 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
         <span class="title">{{ cleanLang(__('lang.client_project_permissions')) }}</span class="title">
     </div>
     <div class="col-sm-4">
-        <div class="switch text-right">
+        <div class="switch text-left">
             <label>
                 <input type="checkbox" name="show_more_settings_projects2" id="show_more_settings_projects2"
                     class="js-switch-toggle-hidden-content" data-target="edit_project_permissions_tasks">
@@ -166,7 +166,7 @@
 <div id="edit_project_permissions_tasks" class="hidden highlighted-panel">
     <!--permission - view tasks-->
     <div class="form-group form-group-checkbox row">
-        <label class="col-5 col-form-label text-left">{{ cleanLang(__('lang.view_tasks')) }}</label>
+        <label class="col-5 col-form-label {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">{{ cleanLang(__('lang.view_tasks')) }}</label>
         <div class="col-7 text-left p-t-5">
             <input type="checkbox" id="clientperm_tasks_view" name="clientperm_tasks_view"
                 class="filled-in chk-col-light-blue" {{ runtimePrechecked($project['clientperm_tasks_view'] ?? '') }}>
@@ -175,7 +175,7 @@
     </div>
     <!--permission - task participation-->
     <div class="form-group form-group-checkbox row">
-        <label class="col-5 col-form-label text-left required">{{ cleanLang(__('lang.task_participation')) }}**</label>
+        <label class="col-5 col-form-label {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} required">{{ cleanLang(__('lang.task_participation')) }}**</label>
         <div class="col-7 text-left p-t-5">
             <input type="checkbox" id="clientperm_tasks_collaborate" name="clientperm_tasks_collaborate"
                 class="filled-in chk-col-light-blue"
@@ -185,7 +185,7 @@
     </div>
     <!--permission - create tasks-->
     <div class="form-group form-group-checkbox row">
-        <label class="col-5 col-form-label text-left required">{{ cleanLang(__('lang.create_tasks')) }}**</label>
+        <label class="col-5 col-form-label {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} required">{{ cleanLang(__('lang.create_tasks')) }}**</label>
         <div class="col-7 text-left p-t-5">
             <input type="checkbox" id="clientperm_tasks_create" name="clientperm_tasks_create"
                 class="filled-in chk-col-light-blue" {{ runtimePrechecked($project['clientperm_tasks_create'] ?? '') }}>
@@ -195,7 +195,7 @@
     <div class="line"></div>
     <!--permission - view timesheets-->
     <div class="form-group form-group-checkbox row">
-        <label class="col-5 col-form-label text-left">{{ cleanLang(__('lang.view_time_sheets')) }}</label>
+        <label class="col-5 col-form-label {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">{{ cleanLang(__('lang.view_time_sheets')) }}</label>
         <div class="col-7 text-left p-t-5">
             <input type="checkbox" id="clientperm_timesheets_view" name="clientperm_timesheets_view"
                 class="filled-in chk-col-light-blue"
@@ -205,7 +205,7 @@
     </div>
     <!--permission - view expenses-->
     <div class="form-group form-group-checkbox row">
-        <label class="col-5 col-form-label text-left">{{ cleanLang(__('lang.view_expenses')) }}</label>
+        <label class="col-5 col-form-label {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">{{ cleanLang(__('lang.view_expenses')) }}</label>
         <div class="col-7 text-left p-t-5">
             <input type="checkbox" id="clientperm_expenses_view" name="clientperm_expenses_view"
                 class="filled-in chk-col-light-blue"
@@ -223,10 +223,10 @@
 
 <!--project options-->
 <div class="spacer row">
-    <div class="col-sm-8">
+    <div class="col-sm-8 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
         <span class="title">{{ cleanLang(__('lang.project_billing')) }}</span class="title">
     </div>
-    <div class="col-sm-4 text-right">
+    <div class="col-sm-4 text-left">
         <div class="switch">
             <label>
                 <input type="checkbox" class="js-switch-toggle-hidden-content" data-target="edit_project_billing">
@@ -294,11 +294,11 @@
 <!--CUSTOMER FIELDS [collapsed]-->
 @if(config('system.settings_customfields_display_projects') == 'toggled')
 <div class="spacer row">
-    <div class="col-sm-12 col-lg-8">
+    <div class="col-sm-12 col-lg-8 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
         <span class="title">{{ cleanLang(__('lang.more_information')) }}</span class="title">
     </div>
     <div class="col-sm-12 col-lg-4">
-        <div class="switch  text-right">
+        <div class="switch  text-left">
             <label>
                 <input type="checkbox" name="add_client_option_other" id="add_client_option_other"
                     class="js-switch-toggle-hidden-content" data-target="projects_custom_fields_collaped">
@@ -323,7 +323,7 @@
 
 @if(config('visibility.project_show_project_option'))
 <div class="form-group form-group-checkbox row">
-    <div class="col-12 text-left p-t-5">
+    <div class="col-12 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} p-t-5">
         <input type="checkbox" id="show_after_adding" name="show_after_adding" class="filled-in chk-col-light-blue"
             checked="checked">
         <label for="show_after_adding">{{ cleanLang(__('lang.show_project_after_its_created')) }}</label>

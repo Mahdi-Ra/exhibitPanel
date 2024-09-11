@@ -4,10 +4,10 @@
         <div class="card-body p-l-15 p-r-15">
             <div class="d-flex p-10 no-block">
                 <span class="align-slef-center">
-                    <h2 class="m-b-0 text-right">{{ runtimeMoneyFormat($payload['invoices']['due']) }}</h2>
+                    <h2 class="m-b-0 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">{{ runtimeMoneyFormat($payload['invoices']['due']) }}</h2>
                     <h6 class="text-muted m-b-0">{{ cleanLang(__('lang.invoices')) }} - {{ cleanLang(__('lang.due')) }}</h6>
                 </span>
-                <div class="align-self-center display-6 mr-auto"><i class="text-warning icon-Coin"></i></div>
+                <div class="align-self-center display-6 {{ app()->getLocale() == 'persian_br' ? 'mr-auto' : 'ml-auto' }}"><i class="text-warning icon-Coin"></i></div>
             </div>
         </div>
         <div class="progress">

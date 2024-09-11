@@ -1,11 +1,11 @@
 
 <?php $__env->startSection('settings-page'); ?>
 <!--settings-->
-<form class="form" id="settingsFormGeneral">
+<form class="form <?php echo e(app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left'); ?>" id="settingsFormGeneral">
     <!--product purchase code-->
     <?php if(config('system.settings_type') == 'standalone'): ?>
     <div class="form-group row">
-        <label class="col-12 control-label col-form-label"><?php echo e(cleanLang(__('lang.purchase_code'))); ?>
+        <label class="col-12 control-label col-form-label "><?php echo e(cleanLang(__('lang.purchase_code'))); ?>
 
             <span class="align-middle" data-toggle="tooltip" title="<?php echo e(cleanLang(__('lang.product_purchase_code'))); ?>"
                 data-placement="top"><i class="ti-info-alt text-themecontrast"></i></span></label>
@@ -19,7 +19,7 @@
     <!--timezone-->
     <div class="form-group row">
         <label for="example-month-input"
-            class="col-12 col-form-label text-left"><?php echo e(cleanLang(__('lang.timezone'))); ?></label>
+            class="col-12 col-form-label "><?php echo e(cleanLang(__('lang.timezone'))); ?></label>
         <div class="col-12">
             <select class="select2-basic-with-search form-control form-control-sm" data-allow-clear="false"
                 id="settings_system_timezone" name="settings_system_timezone">
@@ -479,7 +479,7 @@
     <!--date format-->
     <div class="form-group row">
         <label for="example-month-input"
-            class="col-12 col-form-label text-left"><?php echo e(cleanLang(__('lang.date_format'))); ?></label>
+            class="col-12 col-form-label "><?php echo e(cleanLang(__('lang.date_format'))); ?></label>
         <div class="col-12">
             <select class="select2-basic form-control form-control-sm" id="settings_system_date_format"
                 name="settings_system_date_format">
@@ -513,7 +513,7 @@
     <!--date pickerformat-->
     <div class="form-group row">
         <label for="example-month-input"
-            class="col-12 col-form-label text-left"><?php echo e(cleanLang(__('lang.date_picker_format'))); ?></label>
+            class="col-12 col-form-label "><?php echo e(cleanLang(__('lang.date_picker_format'))); ?></label>
         <div class="col-12">
             <select class="select2-basic form-control form-control-sm" id="settings_system_datepicker_format"
                 name="settings_system_datepicker_format">
@@ -533,7 +533,7 @@
     <!--left menu - default position-->
     <div class="form-group row">
         <label for="example-month-input"
-            class="col-12 col-form-label text-left"><?php echo e(cleanLang(__('lang.left_menu_position'))); ?></label>
+            class="col-12 col-form-label "><?php echo e(cleanLang(__('lang.left_menu_position'))); ?></label>
         <div class="col-12">
             <select class="select2-basic form-control form-control-sm" id="settings_system_default_leftmenu"
                 name="settings_system_default_leftmenu">
@@ -551,7 +551,7 @@
     <!--stats panel - default position-->
     <div class="form-group row">
         <label for="example-month-input"
-            class="col-12 col-form-label text-left"><?php echo e(cleanLang(__('lang.stats_panel_default'))); ?></label>
+            class="col-12 col-form-label "><?php echo e(cleanLang(__('lang.stats_panel_default'))); ?></label>
         <div class="col-12">
             <select class="select2-basic form-control form-control-sm" id="settings_system_default_statspanel"
                 name="settings_system_default_statspanel">
@@ -567,7 +567,7 @@
 
     <!--pagination - limits-->
     <div class="form-group row">
-        <label class="col-12 control-label col-form-label"><?php echo e(cleanLang(__('lang.table_pagination_limits'))); ?></label>
+        <label class="col-12 control-label col-form-label "><?php echo e(cleanLang(__('lang.table_pagination_limits'))); ?></label>
         <div class="col-12">
             <input type="number" class="form-control form-control-sm" id="settings_system_pagination_limits"
                 name="settings_system_pagination_limits" value="<?php echo e($settings->settings_system_pagination_limits); ?>">
@@ -576,7 +576,7 @@
 
     <!--pagination - limits-->
     <div class="form-group row">
-        <label class="col-12 control-label col-form-label"><?php echo e(cleanLang(__('lang.kanban_pagination_limits'))); ?></label>
+        <label class="col-12 control-label col-form-label "><?php echo e(cleanLang(__('lang.kanban_pagination_limits'))); ?></label>
         <div class="col-12">
             <input type="number" class="form-control form-control-sm" id="settings_system_kanban_pagination_limits"
                 name="settings_system_kanban_pagination_limits"
@@ -587,7 +587,7 @@
     <!--close modal onbocy click-->
     <div class="form-group row">
         <label for="example-month-input"
-            class="col-12 col-form-label text-left"><?php echo e(cleanLang(__('lang.close_modal_windows_on_page_click'))); ?></label>
+            class="col-12 col-form-label "><?php echo e(cleanLang(__('lang.close_modal_windows_on_page_click'))); ?></label>
         <div class="col-12">
             <select class="select2-basic form-control form-control-sm" id="settings_system_close_modals_body_click"
                 name="settings_system_close_modals_body_click">
@@ -604,7 +604,7 @@
     <!--close modal onbocy click-->
     <div class="form-group row">
         <label for="example-month-input"
-            class="col-12 col-form-label text-left"><?php echo e(cleanLang(__('lang.session_timeout_popup'))); ?></label>
+            class="col-12 col-form-label "><?php echo e(cleanLang(__('lang.session_timeout_popup'))); ?></label>
         <div class="col-12">
             <select class="select2-basic form-control form-control-sm" id="settings_system_session_login_popup"
                 name="settings_system_session_login_popup">
@@ -622,7 +622,7 @@
     <!--system language-->
     <div class="form-group row">
         <label for="example-month-input"
-            class="col-12 col-form-label text-left"><?php echo e(cleanLang(__('lang.default_language'))); ?></label>
+            class="col-12 col-form-label "><?php echo e(cleanLang(__('lang.default_language'))); ?></label>
         <div class="col-12">
             <select class="select2-basic form-control form-control-sm" id="settings_system_language_default"
                 name="settings_system_language_default">
@@ -638,7 +638,7 @@
     <!--alow users to change language-->
     <div class="form-group row">
         <label for="example-month-input"
-            class="col-12 col-form-label text-left"><?php echo e(cleanLang(__('lang.allow_users_to_change_language'))); ?></label>
+            class="col-12 col-form-label "><?php echo e(cleanLang(__('lang.allow_users_to_change_language'))); ?></label>
         <div class="col-12">
             <select class="select2-basic form-control form-control-sm"
                 id="settings_system_language_allow_users_to_change"
@@ -656,7 +656,7 @@
 
     <!--exporting html content-->
     <div class="form-group row">
-        <label for="example-month-input" class="col-12 col-form-label text-left"><?php echo app('translator')->get('lang.exporting_content'); ?> -
+        <label for="example-month-input" class="col-12 col-form-label "><?php echo app('translator')->get('lang.exporting_content'); ?> -
             (<?php echo app('translator')->get('lang.strip_html'); ?>)</label>
         <div class="col-12">
             <select class="select2-basic form-control form-control-sm" id="settings_system_exporting_strip_html"
@@ -681,7 +681,7 @@
     <?php endif; ?>
 
     <div class="text-right">
-        <button type="submit" id="commonModalSubmitButton" class="btn btn-rounded-x btn-danger waves-effect text-left"
+        <button type="submit" id="commonModalSubmitButton" class="btn btn-rounded-x btn-danger waves-effect text-left <?php echo e(app()->getLocale() == 'persian_br' ? 'float-left' : 'float-right'); ?>"
             data-url="/settings/general" data-loading-target="" data-ajax-type="PUT" data-type="form"
             data-on-start-submit-button="disable"><?php echo e(cleanLang(__('lang.save_changes'))); ?></button>
     </div>

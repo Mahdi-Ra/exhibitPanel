@@ -15,13 +15,13 @@
 
                 <!--standard fields-->
                 <div class="">
-                    <h5>@lang('lang.standard_fields')</h5>
+                    <h5 class="text-right">@lang('lang.standard_fields')</h5>
                 </div>
                 <div class="line"></div>
                 <div class="row">
                     <div class="col-sm-12 col-lg-6">
                         <div class="form-group form-group-checkbox row">
-                            <div class="col-12 p-t-5">
+                            <div class="col-12 p-t-5 text-right">
                                 <input type="checkbox" id="standard_field[ticket_id]" name="standard_field[ticket_id]"
                                     class="filled-in chk-col-light-blue" checked="checked">
                                 <label class="p-l-30" for="standard_field[ticket_id]">@lang('lang.id')</label>
@@ -30,7 +30,7 @@
                     </div>
                     <div class="col-sm-12 col-lg-6">
                         <div class="form-group form-group-checkbox row">
-                            <div class="col-12 p-t-5">
+                            <div class="col-12 p-t-5 text-right">
                                 <input type="checkbox" id="standard_field[client_company_name]"
                                     name="standard_field[client_company_name]" class="filled-in chk-col-light-blue"
                                     checked="checked">
@@ -41,7 +41,7 @@
                     </div>
                     <div class="col-sm-12 col-lg-6">
                         <div class="form-group form-group-checkbox row">
-                            <div class="col-12 p-t-5">
+                            <div class="col-12 p-t-5 text-right">
                                 <input type="checkbox" id="standard_field[created_by_name]"
                                     name="standard_field[created_by_name]" class="filled-in chk-col-light-blue"
                                     checked="checked">
@@ -52,7 +52,7 @@
                     </div>
                     <div class="col-sm-12 col-lg-6">
                         <div class="form-group form-group-checkbox row">
-                            <div class="col-12 p-t-5">
+                            <div class="col-12 p-t-5 text-right">
                                 <input type="checkbox" id="standard_field[created_by_email]"
                                     name="standard_field[created_by_email]" class="filled-in chk-col-light-blue"
                                     checked="checked">
@@ -63,7 +63,7 @@
                     </div>
                     <div class="col-sm-12 col-lg-6">
                         <div class="form-group form-group-checkbox row">
-                            <div class="col-12 p-t-5">
+                            <div class="col-12 p-t-5 text-right">
                                 <input type="checkbox" id="standard_field[ticket_subject]"
                                     name="standard_field[ticket_subject]" class="filled-in chk-col-light-blue"
                                     checked="checked">
@@ -73,7 +73,7 @@
                     </div>
                     <div class="col-sm-12 col-lg-6">
                         <div class="form-group form-group-checkbox row">
-                            <div class="col-12 p-t-5">
+                            <div class="col-12 p-t-5 text-right">
                                 <input type="checkbox" id="standard_field[ticket_message]"
                                     name="standard_field[ticket_message]" class="filled-in chk-col-light-blue"
                                     checked="checked">
@@ -83,7 +83,7 @@
                     </div>
                     <div class="col-sm-12 col-lg-6">
                         <div class="form-group form-group-checkbox row">
-                            <div class="col-12 p-t-5">
+                            <div class="col-12 p-t-5 text-right">
                                 <input type="checkbox" id="standard_field[category_name]" name="standard_field[category_name]"
                                     class="filled-in chk-col-light-blue" checked="checked">
                                 <label class="p-l-30" for="standard_field[category_name]">@lang('lang.department')</label>
@@ -92,7 +92,7 @@
                     </div>
                     <div class="col-sm-12 col-lg-6">
                         <div class="form-group form-group-checkbox row">
-                            <div class="col-12 p-t-5">
+                            <div class="col-12 p-t-5 text-right">
                                 <input type="checkbox" id="standard_field[ticket_created]"
                                     name="standard_field[ticket_created]" class="filled-in chk-col-light-blue"
                                     checked="checked">
@@ -103,7 +103,7 @@
                     </div>
                     <div class="col-sm-12 col-lg-6">
                         <div class="form-group form-group-checkbox row">
-                            <div class="col-12 p-t-5">
+                            <div class="col-12 p-t-5 text-right">
                                 <input type="checkbox" id="standard_field[ticket_priority]"
                                     name="standard_field[ticket_priority]" class="filled-in chk-col-light-blue"
                                     checked="checked">
@@ -114,7 +114,7 @@
                     </div>
                     <div class="col-sm-12 col-lg-6">
                         <div class="form-group form-group-checkbox row">
-                            <div class="col-12 p-t-5">
+                            <div class="col-12 p-t-5 text-right">
                                 <input type="checkbox" id="standard_field[ticket_last_updated]"
                                     name="standard_field[ticket_last_updated]" class="filled-in chk-col-light-blue"
                                     checked="checked">
@@ -125,7 +125,7 @@
                     </div>
                     <div class="col-sm-12 col-lg-6">
                         <div class="form-group form-group-checkbox row">
-                            <div class="col-12 p-t-5">
+                            <div class="col-12 p-t-5 text-right">
                                 <input type="checkbox" id="standard_field[ticket_status]"
                                     name="standard_field[ticket_status]" class="filled-in chk-col-light-blue"
                                     checked="checked">
@@ -136,7 +136,7 @@
                 </div>
 
                 <!--custon fields-->
-                <div class="m-t-30">
+                <div class="m-t-30 text-right">
                     <h5>@lang('lang.custom_fields')</h5>
                 </div>
                 <div class="line"></div>

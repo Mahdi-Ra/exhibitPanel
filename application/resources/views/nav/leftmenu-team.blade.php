@@ -6,7 +6,7 @@
     <div class="scroll-sidebar" id="main-scroll-sidebar">
         <!-- Sidebar navigation-->
         <nav class="sidebar-nav" id="main-sidenav">
-            <ul id="sidebarnav" data-modular-id="main_menu_team">
+            <ul id="sidebarnav" class="{{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}" data-modular-id="main_menu_team">
 
 
 
@@ -30,11 +30,17 @@
                 config('visibility.modules.users')]))
                 <li data-modular-id="main_menu_team_clients"
                     class="sidenav-menu-item {{ $page['mainmenu_customers'] ?? '' }}">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false">
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false">
                         <i class="sl-icon-people"></i>
                         <span class="hide-menu">{{ cleanLang(__('lang.customers')) }}
                         </span>
                     </a>
+                    <style>
+                    .ltr::after {
+                        right: 20px !important;
+                        -webkit-transform: rotate(135deg) !important;
+                        transform: rotate(135deg) !important; }
+                     </style>
                     <ul aria-expanded="false" class="collapse">
                         @if(config('visibility.modules.clients'))
                         <li class="sidenav-submenu {{ $page['submenu_customers'] ?? '' }}" id="submenu_clients">
@@ -57,7 +63,7 @@
                 @if(config('visibility.modules.projects'))
                 <li data-modular-id="main_menu_team_projects"
                     class="sidenav-menu-item {{ $page['mainmenu_projects'] ?? '' }}">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false">
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false">
                         <i class="ti-folder"></i>
                         <span class="hide-menu">{{ cleanLang(__('lang.projects')) }}
                         </span>
@@ -122,7 +128,7 @@
                 config('visibility.modules.proposals')]))
                 <li data-modular-id="main_menu_team_billing"
                     class="sidenav-menu-item {{ $page['mainmenu_sales'] ?? '' }}">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false">
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false">
                         <i class="ti-wallet"></i>
                         <span class="hide-menu">{{ cleanLang(__('lang.sales')) }}
                         </span>
@@ -177,7 +183,7 @@
                 <li data-modular-id="main_menu_team_proposals"
                     class="sidenav-menu-item {{ $page['mainmenu_proposals'] ?? '' }}">
                     <!--multiple menu-->
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false">
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false">
                         <i class="ti-bookmark-alt"></i>
                         <span class="hide-menu">{{ cleanLang(__('lang.proposals')) }}
                         </span>
@@ -202,7 +208,7 @@
                 <li data-modular-id="main_menu_team_proposals"
                     class="sidenav-menu-item {{ $page['mainmenu_proposals'] ?? '' }} menu-tooltip menu-with-tooltip"
                     title="{{ cleanLang(__('lang.proposals')) }}">
-                    <a class="waves-effect waves-dark p-r-20" href="/proposals" aria-expanded="false" target="_self">
+                    <a class="waves-effect waves-dark p-r-20 {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="/proposals" aria-expanded="false" target="_self">
                         <i class="ti-bookmark-alt"></i>
                         <span class="hide-menu">{{ cleanLang(__('lang.proposals')) }}
                         </span>
@@ -217,7 +223,7 @@
                 <li data-modular-id="main_menu_team_contracts"
                     class="sidenav-menu-item {{ $page['mainmenu_contracts'] ?? '' }}">
                     <!--multiple menu-->
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false">
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false">
                         <i class="ti-write"></i>
                         <span class="hide-menu">{{ cleanLang(__('lang.contracts')) }}
                         </span>
@@ -290,7 +296,7 @@
                 <!--support-->
                 <li data-modular-id="main_menu_team_contracts"
                     class="sidenav-menu-item {{ $page['mainmenu_tickets'] ?? '' }}">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false">
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false">
                         <i class="ti-comments"></i>
                         <span class="hide-menu">{{ cleanLang(__('lang.support')) }}
                         </span>
@@ -330,7 +336,7 @@
                 @if(auth()->user()->is_team)
                 <li data-modular-id="main_menu_team_team"
                     class="sidenav-menu-item {{ $page['mainmenu_settings'] ?? '' }}">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false">
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false">
                         <i class="sl-icon-user"></i>
                         <span class="hide-menu">{{ cleanLang(__('lang.team')) }}
                         </span>

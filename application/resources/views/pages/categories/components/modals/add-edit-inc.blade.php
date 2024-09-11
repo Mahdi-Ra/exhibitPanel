@@ -2,7 +2,7 @@
     <div class="col-lg-12">
         <!--title-->
         <div class="form-group row">
-            <label class="col-12 text-left control-label col-form-label required">{{ $page['form_label_category_name'] ?? '' }}</label>
+            <label class="col-12 text-right control-label col-form-label required">{{ $page['form_label_category_name'] ?? '' }}</label>
             <div class="col-12">
                 <input type="text" class="form-control form-control-sm" id="category_name" name="category_name"
                     value="{{ $category->category_name ?? '' }}">
@@ -14,7 +14,7 @@
         <!--migrate to another category-->
         @if(isset($page['section']) && $page['section'] == 'edit')
         <div class="form-group row">
-            <label class="col-12 text-left control-label col-form-label required">{{ $page['form_label_move_items'] ?? '' }} ({{ cleanLang(__('lang.optional')) }})</label>
+            <label class="col-12 text-right control-label col-form-label required">{{ $page['form_label_move_items'] ?? '' }} ({{ cleanLang(__('lang.optional')) }})</label>
             <div class="col-12">
                 <select class="select2-basic form-control form-control-sm" id="migrate"
                     name="migrate">

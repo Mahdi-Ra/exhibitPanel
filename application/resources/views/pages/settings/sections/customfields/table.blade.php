@@ -5,8 +5,8 @@
     <div class="table-responsive p-b-30 customfields-table">
         <table id="custom-fields" class="table m-t-0 m-b-0 table-hover no-wrap contact-list" data-page-size="10"">
             <thead>
-            <th>{{ cleanLang(__('lang.form_field_name')) }}</th>
-            <th class=" w-px-80 actions_column">{{ cleanLang(__('lang.settings')) }}</th>
+            <th class="text-right">{{ cleanLang(__('lang.form_field_name')) }}</th>
+            <th class=" w-px-80 actions_column text-right">{{ cleanLang(__('lang.settings')) }}</th>
             </tr>
             </thead>
             <tbody id="customfields-td-container">

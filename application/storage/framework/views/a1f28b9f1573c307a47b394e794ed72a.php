@@ -1,16 +1,16 @@
-<div class="chat-left-aside menu-closed">
+<div class="chat-left-aside <?php echo e(app()->getLocale() == 'persian_br' ? 'float-right' : 'float-left'); ?> menu-closed">
     <div class="open-panel"><i class="ti-angle-right"></i></div>
     <div class="chat-left-inner" id="chat-left-inner">
         <ul class="chatonline style-none" id="messages-left-menu">
             <!--team-->
             <li id="<?php echo e(messagesUniqueID(auth()->user()->unique_id, 'team')); ?>">
-                <a href="javascript:void(0)" class="ajax-request messages-menu-link active" data-type="form"
+                <a href="javascript:void(0)" class="ajax-request messages-menu-link active <?php echo e(app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left'); ?>" data-type="form"
                     id="messages_team_link"
                     data-form-id="<?php echo e(messagesUniqueID(auth()->user()->unique_id, 'team')); ?>"
                     data-ajax-type="post" data-loading-target="chat-messages-container"
                     data-message-target="team" data-progress-bar="hidden"
                     data-counter-id="messages_counter_team" data-url="<?php echo e(url('/messages/feed?action=load')); ?>">
-                    <img src="<?php echo e(url('public/images/team.png')); ?>" alt="user-img" class="img-circle">
+                    <img src="<?php echo e(url('public/images/team.png')); ?>" alt="user-img" class="img-circle <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl-chatonline-img' : 'ltr-chatonline-img'); ?>">
                     <span><?php echo app('translator')->get('lang.team'); ?>
                         <small class="text-info messages_user_status text-lc"><?php echo app('translator')->get('lang.all_team_members'); ?>
                             <!--counter-->

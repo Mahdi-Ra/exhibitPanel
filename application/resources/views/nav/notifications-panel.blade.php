@@ -1,5 +1,5 @@
 <!-- right-sidebar (reusable)-->
-<div class="right-sidebar right-sidepanel-with-menu" id="sidepanel-notifications">
+<div class="right-sidebar right-sidepanel-with-menu {{ app()->getLocale() == 'persian_br' ? 'rtl-sidebar' : 'ltr-sidebar' }}" id="sidepanel-notifications">
     <form>
         <div class="slimscrollright">
             <!--title-->

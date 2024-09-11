@@ -4,7 +4,7 @@
         @if(config('visibility.contacts_modal_client_fields'))
         <div class="form-group row">
             <label
-                class="col-sm-12 col-lg-3 text-left control-label col-form-label required">{{ cleanLang(__('lang.company_name')) }}*</label>
+                class="col-sm-12 col-lg-3 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label required">{{ cleanLang(__('lang.company_name')) }}*</label>
             <div class="col-sm-12 col-lg-9">
                 <!--select2 basic search-->
                 <select name="clientid" id="clientid"
@@ -17,7 +17,7 @@
 
         <div class="form-group row">
             <label
-                class="col-sm-12 col-lg-3 text-left control-label col-form-label required">{{ cleanLang(__('lang.first_name')) }}*</label>
+                class="col-sm-12 col-lg-3 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label required">{{ cleanLang(__('lang.first_name')) }}*</label>
             <div class="col-sm-12 col-lg-9">
                 <input type="text" class="form-control form-control-sm" id="first_name" name="first_name"
                     value="{{ $user->first_name ?? '' }}">
@@ -25,7 +25,7 @@
         </div>
         <div class="form-group row">
             <label
-                class="col-sm-12 col-lg-3 text-left control-label col-form-label required">{{ cleanLang(__('lang.last_name')) }}*</label>
+                class="col-sm-12 col-lg-3 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label required">{{ cleanLang(__('lang.last_name')) }}*</label>
             <div class="col-sm-12 col-lg-9">
                 <input type="text" class="form-control form-control-sm" id="last_name" name="last_name"
                     value="{{ $user->last_name ?? '' }}">
@@ -33,7 +33,7 @@
         </div>
         <div class="form-group row">
             <label
-                class="col-sm-12 col-lg-3 text-left control-label col-form-label required">{{ cleanLang(__('lang.email_address')) }}*</label>
+                class="col-sm-12 col-lg-3 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label required">{{ cleanLang(__('lang.email_address')) }}*</label>
             <div class="col-sm-12 col-lg-9">
                 <input type="text" class="form-control form-control-sm" id="email" name="email"
                     value="{{ $user->email ?? '' }}">
@@ -41,7 +41,7 @@
         </div>
         <div class="form-group row">
             <label
-                class="col-sm-12 col-lg-3 text-left control-label col-form-label">{{ cleanLang(__('lang.telephone')) }}</label>
+                class="col-sm-12 col-lg-3 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label">{{ cleanLang(__('lang.telephone')) }}</label>
             <div class="col-sm-12 col-lg-9">
                 <input type="text" class="form-control form-control-sm" id="phone" name="phone"
                     value="{{ $user->phone ?? '' }}">
@@ -49,7 +49,7 @@
         </div>
         <div class="form-group row">
             <label
-                class="col-sm-12 col-lg-3 text-left control-label col-form-label">{{ cleanLang(__('lang.position')) }}</label>
+                class="col-sm-12 col-lg-3 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label">{{ cleanLang(__('lang.position')) }}</label>
             <div class="col-sm-12 col-lg-9">
                 <input type="text" class="form-control form-control-sm" id="position" name="position"
                     value="{{ $user->position ?? '' }}">
@@ -58,7 +58,7 @@
 
         <!--timezone-->
         <div class="form-group row">
-            <label class="col-sm-12 col-lg-3 text-left control-label col-form-label">{{ cleanLang(__('lang.timezone')) }}</label>
+            <label class="col-sm-12 col-lg-3 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label">{{ cleanLang(__('lang.timezone')) }}</label>
             <div class="col-sm-12 col-lg-9">
                 <select class="select2-basic-with-search form-control form-control-sm select2-preselected"
                     data-allow-clear="false" data-preselected="{{ $user->timezone ?? config('system.settings_system_timezone')}}"
@@ -602,7 +602,7 @@
         <!--notes-->
         <div class="row">
             <div class="col-12">
-                <div><small><strong>* {{ cleanLang(__('lang.required')) }}</strong></small></div>
+                <div class="{{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"><small><strong>* {{ cleanLang(__('lang.required')) }}</strong></small></div>
             </div>
         </div>
     </div>

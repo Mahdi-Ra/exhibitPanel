@@ -15,13 +15,13 @@
 
                 <!--standard fields-->
                 <div class="">
-                    <h5>@lang('lang.standard_fields')</h5>
+                    <h5 class="text-right">@lang('lang.standard_fields')</h5>
                 </div>
                 <div class="line"></div>
                 <div class="row">
 
                     <!--expense_date-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[expense_date]"
@@ -33,7 +33,7 @@
                     </div>
 
                     <!--expenses_user-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[expenses_user]"
@@ -45,7 +45,7 @@
                     </div>
 
                     <!--expense_description-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[expense_description]"
@@ -58,7 +58,7 @@
                     </div>
 
                     <!--expense_amount-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[expense_amount]"
@@ -71,7 +71,7 @@
                     </div>
 
                     <!--expenses_client-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[expenses_client]"
@@ -83,7 +83,7 @@
                     </div>
 
                     <!--expenses_client_id-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[expenses_client_id]"
@@ -97,7 +97,7 @@
 
 
                     <!--expenses_project-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[expenses_project]"
@@ -110,7 +110,7 @@
                     </div>
 
                     <!--expenses_project_id-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[expenses_project_id]"
@@ -123,7 +123,7 @@
                     </div>
 
                     <!--expenses_invoiced-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[expenses_invoiced]"
@@ -136,7 +136,7 @@
                     </div>
 
                     <!--expenses_invoice_id-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[expenses_invoice_id]"

@@ -4,7 +4,7 @@
 <form class="form" id="settingsFormSubscriptions">
     <!--form text tem-->
     <div class="form-group row">
-        <label class="col-12 control-label col-form-label">{{ cleanLang(__('lang.subscription_prefix')) }}</label>
+        <label class="col-12 control-label col-form-label {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">{{ cleanLang(__('lang.subscription_prefix')) }}</label>
         <div class="col-12">
             <input type="text" class="form-control form-control-sm" id="settings_subscriptions_prefix"
                 name="settings_subscriptions_prefix" value="{{ $settings->settings_subscriptions_prefix ?? '' }}">
@@ -13,7 +13,7 @@
 
     <!--buttons-->
     <div class="text-right">
-        <button type="submit" id="commonModalSubmitButton" class="btn btn-rounded-x btn-danger waves-effect text-left"
+        <button type="submit" id="commonModalSubmitButton" class="btn btn-rounded-x btn-danger waves-effect text-left {{ app()->getLocale() == 'persian_br' ? 'float-left' : 'float-right' }}"
             data-url="/settings/subscriptions" data-loading-target="" data-ajax-type="PUT" data-type="form"
             data-on-start-submit-button="disable">{{ cleanLang(__('lang.save_changes')) }}</button>
     </div>
@@ -21,7 +21,7 @@
 
 @if(config('system.settings_type') == 'standalone')
 <!--[standalone] - settings documentation help-->
-<a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation"><i
+<a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation {{ app()->getLocale() == 'persian_br' ? 'float-right' : 'float-left' }}"><i
         class="ti-info-alt"></i>
     {{ cleanLang(__('lang.help_documentation')) }}
 </a>

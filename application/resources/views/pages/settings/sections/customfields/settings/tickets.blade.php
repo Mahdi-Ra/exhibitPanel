@@ -1,5 +1,5 @@
 @if(request('customfields_type') == 'tickets')
-<tr class="customfields-table-settings hidden toggle-table-settings-row  toggle-table-settings-row-{{ $field->customfields_id }}"
+<tr class="customfields-table-settings hidden toggle-table-settings-row  toggle-table-settings-row-{{ $field->customfields_id }} {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}"
     id="customfields_settings_row_{{ $field->customfields_id }}">
     <td class="b-0">
         <div class="row">

@@ -24,7 +24,7 @@
     @endforeach
 </div>
 
-<div class="alert alert-info m-t-30">
+<div class="alert alert-info m-t-30 text-right">
     <h5 class="text-info"><i class="sl-icon-info"></i> @lang('lang.info')</h5>@lang('lang.you_can_delete_these_files')
 </div>
 @endif
@@ -36,7 +36,7 @@
 
 @if(config('system.settings_type') == 'standalone')
 <!--[standalone] - settings documentation help-->
-<a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation"><i
+<a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation float-right"><i
         class="ti-info-alt"></i>
     {{ cleanLang(__('lang.help_documentation')) }}
 </a>

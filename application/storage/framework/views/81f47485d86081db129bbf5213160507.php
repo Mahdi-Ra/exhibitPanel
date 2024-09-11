@@ -11,12 +11,22 @@
 
                 <!--main-->
                 <li class="sidenav-menu-item <?php echo e($page['settingsmenu_main'] ?? ''); ?>">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr'); ?>" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-main">
                         <span class="hide-menu"><?php echo e(cleanLang(__('lang.main_settings'))); ?>
 
                         </span>
                     </a>
+                    <style>
+                    .ltr::after {
+                        right: 10px !important;
+                        -webkit-transform: rotate(135deg) !important;
+                        transform: rotate(135deg) !important; }
+                        .rtl::after {
+                        right: 10px !important;
+                        -webkit-transform: rotate(135deg) !important;
+                        transform: rotate(135deg) !important; }
+                     </style>
                     <ul aria-expanded="false" class="collapse">
                         <li>
                             <a href="javascript:void(0);" data-url="/settings/general" id="settings-menu-main-general"
@@ -99,7 +109,7 @@
 
                 <!--Email-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr'); ?>" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-email">
                         <span class="hide-menu"><?php echo e(cleanLang(__('lang.email'))); ?>
 
@@ -142,7 +152,7 @@
 
                 <!--clients-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr'); ?>" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-clients">
                         <span class="hide-menu"><?php echo e(cleanLang(__('lang.clients'))); ?>
 
@@ -174,7 +184,7 @@
 
                 <!--projects-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr'); ?>" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-projects">
                         <span class="hide-menu"><?php echo e(cleanLang(__('lang.projects'))); ?>
 
@@ -217,7 +227,7 @@
 
                 <!--tasks-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr'); ?>" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-tasks">
                         <span class="hide-menu"><?php echo e(cleanLang(__('lang.tasks'))); ?>
 
@@ -247,7 +257,7 @@
 
                 <!--leads-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr'); ?>" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-leads">
                         <span class="hide-menu"><?php echo e(cleanLang(__('lang.leads'))); ?>
 
@@ -289,7 +299,7 @@
 
                 <!--milestone-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr'); ?>" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-milestones">
                         <span class="hide-menu"><?php echo e(cleanLang(__('lang.milestones'))); ?>
 
@@ -311,7 +321,7 @@
 
                 <!--invoices-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr'); ?>" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-invoices">
                         <span class="hide-menu"><?php echo e(cleanLang(__('lang.invoices'))); ?>
 
@@ -333,7 +343,7 @@
 
                 <!--estimates-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr'); ?>" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-estimates">
                         <span class="hide-menu"><?php echo e(cleanLang(__('lang.estimates'))); ?>
 
@@ -362,7 +372,7 @@
 
                 <!--proposals-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr'); ?>" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-proposals">
                         <span class="hide-menu"><?php echo e(cleanLang(__('lang.proposals'))); ?>
 
@@ -390,7 +400,7 @@
 
                 <!--contracts-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr'); ?>" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-contracts">
                         <span class="hide-menu"><?php echo e(cleanLang(__('lang.contracts'))); ?>
 
@@ -413,7 +423,7 @@
 
                 <!--products-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr'); ?>" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-items">
                         <span class="hide-menu"><?php echo e(cleanLang(__('lang.products'))); ?>
 
@@ -431,7 +441,7 @@
 
                 <!--expenses-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr'); ?>" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-expenses">
                         <span class="hide-menu"><?php echo e(cleanLang(__('lang.expenses'))); ?>
 
@@ -453,7 +463,7 @@
 
                 <!--subscriptions-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr'); ?>" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-subscriptions">
                         <span class="hide-menu"><?php echo e(cleanLang(__('lang.subscriptions'))); ?>
 
@@ -470,7 +480,7 @@
 
                 <!--taxes-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr'); ?>" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-tax">
                         <span class="hide-menu"><?php echo e(cleanLang(__('lang.tax'))); ?>
 
@@ -487,7 +497,7 @@
 
                 <!--tags-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr'); ?>" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-tags">
                         <span class="hide-menu"><?php echo e(cleanLang(__('lang.tags'))); ?>
 
@@ -507,7 +517,7 @@
 
                 <!--files-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr'); ?>" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-files">
                         <span class="hide-menu"><?php echo e(cleanLang(__('lang.files'))); ?>
 
@@ -534,7 +544,7 @@
 
                 <!--payment gateways-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr'); ?>" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-payment-methods">
                         <span class="hide-menu"><?php echo e(cleanLang(__('lang.payment_methods'))); ?>
 
@@ -583,7 +593,7 @@
 
                 <!--roles-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr'); ?>" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-roles">
                         <span class="hide-menu"><?php echo e(cleanLang(__('lang.user_roles'))); ?>
 
@@ -599,7 +609,7 @@
 
                 <!--tickets-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr'); ?>" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-tickets">
                         <span class="hide-menu"><?php echo e(cleanLang(__('lang.tickets'))); ?>
 
@@ -641,7 +651,7 @@
 
                 <!--knowledgeebase-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr'); ?>" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-knowledgebase">
                         <span class="hide-menu"><?php echo e(cleanLang(__('lang.knowledgebase'))); ?>
 
@@ -665,7 +675,7 @@
                 <!--Other-->
                 <?php if(config('system.settings_type') == 'standalone'): ?>
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr'); ?>" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-other">
                         <span class="hide-menu"><?php echo e(cleanLang(__('lang.other'))); ?>
 

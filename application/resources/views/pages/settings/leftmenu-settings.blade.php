@@ -11,11 +11,21 @@
 
                 <!--main-->
                 <li class="sidenav-menu-item {{ $page['settingsmenu_main'] ?? '' }}">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-main">
                         <span class="hide-menu">{{ cleanLang(__('lang.main_settings')) }}
                         </span>
                     </a>
+                    <style>
+                    .ltr::after {
+                        right: 10px !important;
+                        -webkit-transform: rotate(135deg) !important;
+                        transform: rotate(135deg) !important; }
+                        .rtl::after {
+                        right: 10px !important;
+                        -webkit-transform: rotate(135deg) !important;
+                        transform: rotate(135deg) !important; }
+                     </style>
                     <ul aria-expanded="false" class="collapse">
                         <li>
                             <a href="javascript:void(0);" data-url="/settings/general" id="settings-menu-main-general"
@@ -97,7 +107,7 @@
 
                 <!--Email-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-email">
                         <span class="hide-menu">{{ cleanLang(__('lang.email')) }}
                         </span>
@@ -139,7 +149,7 @@
 
                 <!--clients-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-clients">
                         <span class="hide-menu">{{ cleanLang(__('lang.clients')) }}
                         </span>
@@ -169,7 +179,7 @@
 
                 <!--projects-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-projects">
                         <span class="hide-menu">{{ cleanLang(__('lang.projects')) }}
                         </span>
@@ -210,7 +220,7 @@
 
                 <!--tasks-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-tasks">
                         <span class="hide-menu">{{ cleanLang(__('lang.tasks')) }}
                         </span>
@@ -239,7 +249,7 @@
 
                 <!--leads-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-leads">
                         <span class="hide-menu">{{ cleanLang(__('lang.leads')) }}
                         </span>
@@ -280,7 +290,7 @@
 
                 <!--milestone-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-milestones">
                         <span class="hide-menu">{{ cleanLang(__('lang.milestones')) }}
                         </span>
@@ -301,7 +311,7 @@
 
                 <!--invoices-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-invoices">
                         <span class="hide-menu">{{ cleanLang(__('lang.invoices')) }}
                         </span>
@@ -321,7 +331,7 @@
 
                 <!--estimates-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-estimates">
                         <span class="hide-menu">{{ cleanLang(__('lang.estimates')) }}
                         </span>
@@ -348,7 +358,7 @@
 
                 <!--proposals-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-proposals">
                         <span class="hide-menu">{{ cleanLang(__('lang.proposals')) }}
                         </span>
@@ -374,7 +384,7 @@
 
                 <!--contracts-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-contracts">
                         <span class="hide-menu">{{ cleanLang(__('lang.contracts')) }}
                         </span>
@@ -395,7 +405,7 @@
 
                 <!--products-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-items">
                         <span class="hide-menu">{{ cleanLang(__('lang.products')) }}
                         </span>
@@ -411,7 +421,7 @@
 
                 <!--expenses-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-expenses">
                         <span class="hide-menu">{{ cleanLang(__('lang.expenses')) }}
                         </span>
@@ -431,7 +441,7 @@
 
                 <!--subscriptions-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-subscriptions">
                         <span class="hide-menu">{{ cleanLang(__('lang.subscriptions')) }}
                         </span>
@@ -447,7 +457,7 @@
 
                 <!--taxes-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-tax">
                         <span class="hide-menu">{{ cleanLang(__('lang.tax')) }}
                         </span>
@@ -463,7 +473,7 @@
 
                 <!--tags-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-tags">
                         <span class="hide-menu">{{ cleanLang(__('lang.tags')) }}
                         </span>
@@ -482,7 +492,7 @@
 
                 <!--files-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-files">
                         <span class="hide-menu">{{ cleanLang(__('lang.files')) }}
                         </span>
@@ -508,7 +518,7 @@
 
                 <!--payment gateways-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-payment-methods">
                         <span class="hide-menu">{{ cleanLang(__('lang.payment_methods')) }}
                         </span>
@@ -556,7 +566,7 @@
 
                 <!--roles-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-roles">
                         <span class="hide-menu">{{ cleanLang(__('lang.user_roles')) }}
                         </span>
@@ -571,7 +581,7 @@
 
                 <!--tickets-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-tickets">
                         <span class="hide-menu">{{ cleanLang(__('lang.tickets')) }}
                         </span>
@@ -610,7 +620,7 @@
 
                 <!--knowledgeebase-->
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-knowledgebase">
                         <span class="hide-menu">{{ cleanLang(__('lang.knowledgebase')) }}
                         </span>
@@ -633,7 +643,7 @@
                 <!--Other-->
                 @if(config('system.settings_type') == 'standalone')
                 <li class="sidenav-menu-item">
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-dark {{ app()->getLocale() == 'persian_br' ? 'rtl' : 'ltr' }}" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-other">
                         <span class="hide-menu">{{ cleanLang(__('lang.other')) }}
                         </span>

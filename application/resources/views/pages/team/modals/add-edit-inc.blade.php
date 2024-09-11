@@ -3,7 +3,7 @@
     <div class="col-lg-12">
         <div class="form-group row">
             <label
-                class="col-sm-12 col-lg-3 text-left control-label col-form-label required">{{ cleanLang(__('lang.first_name')) }}*</label>
+                class="col-sm-12 col-lg-3 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label required">{{ cleanLang(__('lang.first_name')) }}*</label>
             <div class="col-sm-12 col-lg-9">
                 <input type="text" class="form-control form-control-sm" id="first_name" name="first_name"
                     value="{{ $user->first_name ?? '' }}">
@@ -17,7 +17,7 @@
         <!--chrome workaround prevent autofill-->
         <div class="form-group row">
             <label
-                class="col-sm-12 col-lg-3 text-left control-label col-form-label required">{{ cleanLang(__('lang.last_name')) }}*</label>
+                class="col-sm-12 col-lg-3 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label required">{{ cleanLang(__('lang.last_name')) }}*</label>
             <div class="col-sm-12 col-lg-9">
                 <input type="text" class="form-control form-control-sm" id="last_name" name="last_name"
                     value="{{ $user->last_name ?? '' }}">
@@ -25,7 +25,7 @@
         </div>
         <div class="form-group row">
             <label
-                class="col-sm-12 col-lg-3 text-left control-label col-form-label required">{{ cleanLang(__('lang.email_address')) }}*</label>
+                class="col-sm-12 col-lg-3 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label required">{{ cleanLang(__('lang.email_address')) }}*</label>
             <div class="col-sm-12 col-lg-9">
                 <input type="text" class="form-control form-control-sm" id="email" name="email"
                     value="{{ $user->email ?? '' }}">
@@ -35,7 +35,7 @@
         <!--[edit] phone-->
         <div class="form-group row">
             <label
-                class="col-sm-12 col-lg-3 text-left control-label col-form-label">{{ cleanLang(__('lang.phone')) }}</label>
+                class="col-sm-12 col-lg-3 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label">{{ cleanLang(__('lang.phone')) }}</label>
             <div class="col-sm-12 col-lg-9">
                 <input type="text" class="form-control form-control-sm" id="phone" name="phone"
                     value="{{ $user->phone ?? '' }}">
@@ -46,7 +46,7 @@
         <!--position-->
         <div class="form-group row">
             <label
-                class="col-sm-12 col-lg-3 text-left control-label col-form-label">{{ cleanLang(__('lang.job_title')) }}</label>
+                class="col-sm-12 col-lg-3 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label">{{ cleanLang(__('lang.job_title')) }}</label>
             <div class="col-sm-12 col-lg-9">
                 <input type="text" class="form-control form-control-sm" id="position" name="position"
                     value="{{ $user->position ?? '' }}">
@@ -58,7 +58,7 @@
         <!--[team][admin] user role-->
         <div class="form-group row">
             <label
-                class="col-sm-12 col-lg-3 text-left control-label col-form-label required">{{ cleanLang(__('lang.role')) }}*</label>
+                class="col-sm-12 col-lg-3 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }} control-label col-form-label required">{{ cleanLang(__('lang.role')) }}*</label>
             <div class="col-sm-12 col-lg-9">
                 <select class="select2-basic form-control form-control-sm" id="role_id" name="role_id">
                     <option></option>
@@ -81,7 +81,7 @@
                 {{ cleanLang(__('lang.preferences')) }}
             </div>
             <div class="col-sm-12 col-lg-4">
-                <div class="switch  text-right">
+                <div class="switch  {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
                     <label>
                         <input type="checkbox" name="toggle_social_profile" id="toggle_social_preferences"
                             class="js-switch-toggle-hidden-content" data-target="preferences_section">
@@ -111,7 +111,7 @@
                 {{ cleanLang(__('lang.social_profile')) }}
             </div>
             <div class="col-sm-12 col-lg-4">
-                <div class="switch  text-right">
+                <div class="switch  {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
                     <label>
                         <input type="checkbox" name="toggle_social_profile" id="toggle_social_profile"
                             class="js-switch-toggle-hidden-content" data-target="social_profile_section">
@@ -170,7 +170,7 @@
 
         <!--notes-->
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
                 <div><small><strong>* {{ cleanLang(__('lang.required')) }}</strong></small></div>
             </div>
         </div>

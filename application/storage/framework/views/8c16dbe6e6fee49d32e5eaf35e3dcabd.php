@@ -16,14 +16,14 @@
 
                 <!--standard fields-->
                 <div class="">
-                    <h5><?php echo app('translator')->get('lang.standard_fields'); ?></h5>
+                    <h5 class="text-right"><?php echo app('translator')->get('lang.standard_fields'); ?></h5>
                 </div>
                 <div class="line"></div>
                 <div class="row">
 
 
                     <!--payment_date-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[payment_date]"
@@ -35,7 +35,7 @@
                     </div>
 
                     <!--payment_id-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[payment_id]" name="standard_field[payment_id]"
@@ -46,7 +46,7 @@
                     </div>
 
                     <!--payment_transaction_id-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[payment_transaction_id]"
@@ -60,7 +60,7 @@
 
 
                     <!--payment_amount-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[payment_amount]"
@@ -72,7 +72,7 @@
                     </div>
 
                     <!--payment_invoiceid-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[payment_invoiceid]"
@@ -85,7 +85,7 @@
                     </div>
 
                     <!--payment_client_name-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[payment_client_name]"
@@ -98,7 +98,7 @@
                     </div>
 
                     <!--payment_clientid-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[payment_clientid]"
@@ -111,7 +111,7 @@
                     </div>
 
                     <!--payment_projectid-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[payment_projectid]"
@@ -124,7 +124,7 @@
                     </div>
 
                     <!--payment_project_title-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[payment_project_title]"
@@ -137,7 +137,7 @@
                     </div>
 
                     <!--payment_gateway-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[payment_gateway]"
@@ -150,7 +150,7 @@
                     </div>
 
                     <!--payment_notes-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[payment_notes]"

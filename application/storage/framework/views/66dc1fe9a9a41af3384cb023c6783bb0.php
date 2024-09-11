@@ -1,4 +1,4 @@
-<div class="boards count-<?php echo e(@count($tasks ?? [])); ?>" id="tasks-view-wrapper">
+<div class="boards <?php echo e(app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left'); ?> count-<?php echo e(@count($tasks ?? [])); ?>" id="tasks-view-wrapper">
     <!--each board-->
     <?php $__currentLoopData = $boards; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $board): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     <!--board-->

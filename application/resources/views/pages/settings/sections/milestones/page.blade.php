@@ -4,7 +4,7 @@
 <form class="form">
 
     <!--show value-->
-    <div class="form-group form-group-checkbox row">
+    <div class="form-group form-group-checkbox row {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
         <label class="col-5 col-form-label">{{ cleanLang(__('lang.allow_project_managers_to_edit_milestone')) }}</label>
         <div class="col-7 p-t-5">
             <input type="checkbox" id="settings_projects_assignedperm_milestone_manage"
@@ -16,7 +16,7 @@
     <!--buttons-->
     <div class="text-right">
         <button type="submit" id="commonModalSubmitButton"
-            class="btn btn-rounded-x btn-danger waves-effect text-left js-ajax-ux-request"
+            class="btn btn-rounded-x btn-danger waves-effect text-left js-ajax-ux-request {{ app()->getLocale() == 'persian_br' ? 'float-left' : 'float-right' }}"
             data-url="/settings/milestones/settings" data-loading-target="" data-ajax-type="PUT" data-type="form"
             data-on-start-submit-button="disable">{{ cleanLang(__('lang.save_changes')) }}</button>
     </div>
@@ -24,7 +24,7 @@
 
 @if(config('system.settings_type') == 'standalone')
 <!--[standalone] - settings documentation help-->
-<a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation"><i
+<a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation {{ app()->getLocale() == 'persian_br' ? 'float-right' : 'float-left' }}"><i
         class="ti-info-alt"></i>
     {{ cleanLang(__('lang.help_documentation')) }}
 </a>

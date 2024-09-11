@@ -1,14 +1,14 @@
 @extends('pages.settings.ajaxwrapper')
 @section('settings-page')
 <!--settings-->
-<form class="form">
+<form class="form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
 
     <h5>{{ cleanLang(__('lang.general_settings')) }}</h5>
     <div class="line"></div>
     <!--settings2_tasks_manage_dependencies-->
     <div class="form-group row">
         <label
-            class="col-sm-12 col-lg-4 text-left control-label col-form-label">@lang('lang.manage_task_dependencies')</label>
+            class="col-sm-12 col-lg-4 control-label col-form-label">@lang('lang.manage_task_dependencies')</label>
         <div class="col-sm-12 col-lg-8">
             <select class="select2-basic form-control form-control-sm select2-preselected"
                 id="settings2_tasks_manage_dependencies" name="settings2_tasks_manage_dependencies"
@@ -135,7 +135,7 @@
     <!--buttons-->
     <div class="text-right">
         <button type="submit" id="commonModalSubmitButton"
-            class="btn btn-rounded-x btn-danger waves-effect text-left js-ajax-ux-request" data-url="/settings/tasks"
+            class="btn btn-rounded-x btn-danger waves-effect text-left js-ajax-ux-request {{ app()->getLocale() == 'persian_br' ? 'float-left' : 'float-right' }}" data-url="/settings/tasks"
             data-loading-target="" data-ajax-type="PUT" data-type="form"
             data-on-start-submit-button="disable">{{ cleanLang(__('lang.save_changes')) }}</button>
     </div>
@@ -143,7 +143,7 @@
 
 @if(config('system.settings_type') == 'standalone')
 <!--[standalone] - settings documentation help-->
-<a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation"><i
+<a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation {{ app()->getLocale() == 'persian_br' ? 'float-right' : 'float-left' }}"><i
         class="ti-info-alt"></i>
     {{ cleanLang(__('lang.help_documentation')) }}
 </a>

@@ -16,14 +16,14 @@
 
                 <!--standard fields-->
                 <div class="">
-                    <h5><?php echo app('translator')->get('lang.standard_fields'); ?></h5>
+                    <h5 class="text-right"><?php echo app('translator')->get('lang.standard_fields'); ?></h5>
                 </div>
                 <div class="line"></div>
                 <div class="row">
 
                     
                     <!--bill_date-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[bill_date]" name="standard_field[bill_date]"
@@ -34,7 +34,7 @@
                     </div>
 
                     <!--bill_invoiceid-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[bill_invoiceid]" name="standard_field[bill_invoiceid]"
@@ -45,7 +45,7 @@
                     </div>
 
                     <!--client_company_name-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[client_company_name]"
@@ -58,7 +58,7 @@
                     </div>
 
                     <!--bill_clientid-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[bill_clientid]"
@@ -71,7 +71,7 @@
                     </div>
 
                     <!--project_title-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[project_title]"
@@ -84,7 +84,7 @@
                     </div>
 
                     <!--bill_projectid-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[bill_projectid]"
@@ -97,7 +97,7 @@
                     </div>
 
                     <!--bill_subtotal-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[bill_subtotal]"
@@ -110,7 +110,7 @@
                     </div>
 
                     <!--bill_discount_type-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[bill_discount_type]"
@@ -123,7 +123,7 @@
                     </div>
 
                     <!--bill_discount_percentage-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[bill_discount_percentage]"
@@ -136,7 +136,7 @@
                     </div>
 
                     <!--bill_discount_amount-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[bill_discount_amount]"
@@ -149,7 +149,7 @@
                     </div>
 
                     <!--bill_amount_before_tax-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[bill_amount_before_tax]"
@@ -162,7 +162,7 @@
                     </div>
 
                     <!--bill_tax_total_amount-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[bill_tax_total_amount]"
@@ -175,7 +175,7 @@
                     </div>
 
                     <!--bill_adjustment_description-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[bill_adjustment_description]"
@@ -188,7 +188,7 @@
                     </div>
 
                     <!--bill_adjustment_amount-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[bill_adjustment_amount]"
@@ -201,7 +201,7 @@
                     </div>
 
                    <!--bill_final_amount-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[bill_final_amount]"
@@ -214,7 +214,7 @@
                     </div>
 
                    <!--bill_recurring-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[bill_recurring]"
@@ -227,7 +227,7 @@
                     </div>
 
                     <!--bill_recurring_duration-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[bill_recurring_duration]"
@@ -240,7 +240,7 @@
                     </div>
 
                     <!--bill_recurring_period-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[bill_recurring_period]"
@@ -253,7 +253,7 @@
                     </div>
 
                     <!--bill_recurring_cycles-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[bill_recurring_cycles]"
@@ -266,7 +266,7 @@
                     </div>
 
                     <!--bill_recurring_cycles_counter-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[bill_recurring_cycles_counter]"
@@ -279,7 +279,7 @@
                     </div>
 
                     <!--bill_recurring_last-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[bill_recurring_last]"
@@ -292,7 +292,7 @@
                     </div>
 
                     <!--bill_recurring_next-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[bill_recurring_next]"
@@ -305,7 +305,7 @@
                     </div>
 
                     <!--bill_overdue_reminder_sent-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[bill_overdue_reminder_sent]"
@@ -318,7 +318,7 @@
                     </div>
 
                     <!--bill_viewed_by_client-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[bill_viewed_by_client]"
@@ -331,7 +331,7 @@
                     </div>
 
                     <!--bill_status-->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6 text-right">
                         <div class="form-group form-group-checkbox row">
                             <div class="col-12 p-t-5">
                                 <input type="checkbox" id="standard_field[bill_status]"

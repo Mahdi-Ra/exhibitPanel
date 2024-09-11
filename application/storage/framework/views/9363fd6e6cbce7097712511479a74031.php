@@ -5,7 +5,7 @@
 <?php echo $__env->make('layout.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 <body id="main-body"
-    class="loggedin fix-header card-no-border fix-sidebar <?php echo e(config('settings.css_kanban')); ?> <?php echo e(runtimePreferenceLeftmenuPosition(auth()->user()->left_menu_position)); ?> <?php echo e($page['page'] ?? ''); ?>">
+    class="loggedin fix-header <?php echo e(app()->getLocale() == 'persian_br' ? 'rtl' : ''); ?> card-no-border fix-sidebar <?php echo e(config('settings.css_kanban')); ?> <?php echo e(runtimePreferenceLeftmenuPosition(auth()->user()->left_menu_position)); ?> <?php echo e($page['page'] ?? ''); ?>" >
 
     <!--main wrapper-->
     <div id="main-wrapper">
@@ -23,8 +23,17 @@
 
 
         <!--page wrapper-->
-        <div class="page-wrapper">
-
+        <div class="page-wrapper <?php echo e(app()->getLocale() == 'persian_br' ? 'right-direction' : 'left-direction'); ?>">
+            <style>
+               @media (min-width: 1024px) {
+                .left-direction {
+                    margin-left: 210px;
+                    }
+                    .right-direction {
+                    margin-right: 210px;
+                    }
+                }
+            </style>
             <!--overlay-->
             <div class="page-wrapper-overlay js-close-side-panels hidden" data-target=""></div>
             <!--overlay-->

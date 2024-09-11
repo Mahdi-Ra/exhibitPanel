@@ -1,6 +1,6 @@
 @extends('pages.settings.ajaxwrapper')
 @section('settings-page')
-<div class="table-responsive">
+<div class="table-responsive text-right">
     <table class="table" id="standard-fields-sorting" data-type="form" data-form-id="standard-fields-sorting"
         data-ajax-type="post" data-url="{{ url('settings/customfields/update-standard-form-positions') }}"
         data-progress-bar='hidden'>

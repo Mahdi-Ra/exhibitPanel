@@ -3,7 +3,7 @@
     <div class="card-body">
         <div class="table-responsive">
             @if (@count($categories ?? []) > 0)
-            <table id="demo-foo-addrow" class="table m-t-0 m-b-0 table-hover no-wrap contact-list" data-page-size="10">
+            <table id="demo-foo-addrow" class="table m-t-0 m-b-0 table-hover no-wrap contact-list text-right" data-page-size="10">
                 <thead>
                     <tr>
                         <th class="categories_col_name">{{ cleanLang(__('lang.name')) }}</th>
@@ -44,7 +44,7 @@
             <!--[standalone] - settings documentation help-->
             <div>
                 <a href="https://growcrm.io/documentation" target="_blank"
-                    class="btn btn-sm btn-info help-documentation"><i class="ti-info-alt"></i>
+                    class="btn btn-sm btn-info help-documentation float-right"><i class="ti-info-alt"></i>
                     {{ cleanLang(__('lang.help_documentation')) }}</a>
             </div>
             @endif

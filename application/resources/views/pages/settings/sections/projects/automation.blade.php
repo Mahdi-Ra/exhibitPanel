@@ -1,12 +1,12 @@
 @extends('pages.settings.ajaxwrapper')
 @section('settings-page')
 <!--settings-->
-<form class="form" id="settings-projects-automation">
+<form class="form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}" id="settings-projects-automation">
 
 
     <!--settings2_projects_automation_default_status-->
     <div class="form-group row p-b-10">
-        <label class="col-sm-12 text-left control-label col-form-label">@lang('lang.project_automation_default') <span
+        <label class="col-sm-12 control-label col-form-label">@lang('lang.project_automation_default') <span
                 class="align-middle text-info font-16" data-toggle="tooltip"
                 title="@lang('lang.project_automation_default_info')" data-placement="top"><i
                     class="ti-info-alt"></i></span></label>
@@ -192,7 +192,7 @@
 
     <!--buttons-->
     <div class="text-right">
-        <button type="submit" id="commonModalSubmitButton" class="btn btn-rounded-x btn-danger waves-effect text-left"
+        <button type="submit" id="commonModalSubmitButton" class="btn btn-rounded-x btn-danger waves-effect text-left {{ app()->getLocale() == 'persian_br' ? 'float-left' : 'float-right' }}"
             data-url="/settings/projects/automation" data-loading-target="" data-ajax-type="PUT" data-type="form"
             data-on-start-submit-button="disable">{{ cleanLang(__('lang.save_changes')) }}</button>
     </div>
@@ -200,7 +200,7 @@
 
 @if(config('system.settings_type') == 'standalone')
 <!--[standalone] - settings documentation help-->
-<a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation"><i
+<a href="https://growcrm.io/documentation" target="_blank" class="btn btn-sm btn-info help-documentation {{ app()->getLocale() == 'persian_br' ? 'float-right' : 'float-left' }}"><i
         class="ti-info-alt"></i>
     {{ cleanLang(__('lang.help_documentation')) }}
 </a>

@@ -1,7 +1,7 @@
 @extends('pages.settings.ajaxwrapper')
 @section('settings-page')
 <!--settings-->
-<form class="form">
+<form class="form {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}">
 
     <h5>{{ cleanLang(__('lang.kanban_board_settings')) }}</h5>
     <div class="line"></div>
@@ -105,7 +105,7 @@
     <!--[standalone] - settings documentation help-->
     <div>
         <a href="https://growcrm.io/documentation/leads-settings/" target="_blank"
-            class="btn btn-sm btn-info help-documentation"><i class="ti-info-alt"></i>
+            class="btn btn-sm btn-info help-documentation {{ app()->getLocale() == 'persian_br' ? 'float-right' : 'float-left' }}"><i class="ti-info-alt"></i>
             {{ cleanLang(__('lang.help_documentation')) }}</a>
     </div>
     @endif
@@ -113,7 +113,7 @@
     <!--buttons-->
     <div class="text-right">
         <button type="submit" id="commonModalSubmitButton"
-            class="btn btn-rounded-x btn-danger waves-effect text-left js-ajax-ux-request"
+            class="btn btn-rounded-x btn-danger waves-effect text-left js-ajax-ux-request {{ app()->getLocale() == 'persian_br' ? 'float-left' : 'float-right' }}"
             data-url="/settings/leads/general" data-loading-target="" data-ajax-type="PUT" data-type="form"
             data-on-start-submit-button="disable">{{ cleanLang(__('lang.save_changes')) }}</button>
     </div>

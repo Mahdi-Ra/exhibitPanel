@@ -1,7 +1,7 @@
 <!--table-->
 @if (@count($invoices ?? []) > 0)
 <div class="table-responsive report-results-table-container" id="report-results-container">
-    <table class="table table-hover no-wrap" id="report-results-table">
+    <table class="table table-hover no-wrap {{ app()->getLocale() == 'persian_br' ? 'text-right' : 'text-left' }}" id="report-results-table">
         <thead>
             <tr>
                 <!--category-->
